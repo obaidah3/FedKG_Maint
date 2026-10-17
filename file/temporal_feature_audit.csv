@@ -1,0 +1,5 @@
+split,rows,feature_count,missing_feature_cells,output_file
+train_federated,557200,24,16156,/content/drive/MyDrive/FedKG-Maint/data/processed/train_federated_features.parquet
+validation_federated,68000,24,0,/content/drive/MyDrive/FedKG-Maint/data/processed/validation_federated_features.parquet
+test_heldout,17480,24,0,/content/drive/MyDrive/FedKG-Maint/data/processed/test_heldout_features.parquet
+test_gap_heldout,480,24,0,/content/drive/MyDrive/FedKG-Maint/data/processed/test_gap_heldout_features.parquet

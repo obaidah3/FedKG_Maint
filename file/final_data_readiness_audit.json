@@ -1,0 +1,25 @@
+{
+  "schema_consistent": true,
+  "feature_count": 26,
+  "training_rows": 557200,
+  "validation_rows": 68000,
+  "heldout_test_rows": 17480,
+  "heldout_test_factory": "factory_5",
+  "training_factories": [
+    "factory_1",
+    "factory_2",
+    "factory_3",
+    "factory_4"
+  ],
+  "training_machines": 80,
+  "heldout_machines": 20,
+  "training_positive_rate": 0.02088478104809763,
+  "validation_positive_rate": 0.015823529411764705,
+  "heldout_test_positive_rate": 0.017848970251716247,
+  "constant_numeric_features": [
+    "has_prior_maintenance"
+  ],
+  "scaling_fitted": false,
+  "model_training_started": false,
+  "heldout_test_used_for_model_selection": false
+}
