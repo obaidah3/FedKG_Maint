@@ -1,0 +1,13 @@
+case_id,faithfulness_with_kg,faithfulness_without_kg,actionability_with_kg,actionability_without_kg,uncertainty_with_kg,uncertainty_without_kg,unsupported_claim_count_with_kg,unsupported_claim_count_without_kg,faithfulness_delta_with_minus_without,actionability_delta_with_minus_without,uncertainty_delta_with_minus_without,unsupported_claim_count_delta_with_minus_without
+factory_1_high,3,5,5,4,5,5,1,0,-2,1,0,1
+factory_1_low,4,5,4,3,5,5,1,0,-1,1,0,1
+factory_1_mid,4,5,5,3,5,5,0,0,-1,2,0,0
+factory_2_high,4,5,4,4,5,5,0,0,-1,0,0,0
+factory_2_low,5,5,4,3,5,5,0,0,0,1,0,0
+factory_2_mid,5,5,4,3,5,5,0,0,0,1,0,0
+factory_3_high,3,5,4,4,5,5,1,0,-2,0,0,1
+factory_3_low,5,5,5,3,5,5,0,0,0,2,0,0
+factory_3_mid,3,5,4,3,5,5,2,0,-2,1,0,2
+factory_4_high,4,5,4,4,5,5,1,0,-1,0,0,1
+factory_4_low,3,5,4,3,5,5,4,0,-2,1,0,4
+factory_4_mid,4,5,4,3,5,5,0,0,-1,1,0,0

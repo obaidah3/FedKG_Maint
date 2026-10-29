@@ -1,0 +1,264 @@
+{
+  "created_utc": "2026-10-28T17:37:57.812903+00:00",
+  "source": "FedKG-Maint Google Drive",
+  "file_count": 51,
+  "files": [
+    {
+      "path": "unified_runs/unified_v3_final_20261025/FINAL_V3_REPORT.md",
+      "bytes": 9745,
+      "sha256": "bef15befa14caf7189b321e459cbf4bc8d6805aeb35e8cd70c415afbad526467"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/FINAL_V3_AUDIT.json",
+      "bytes": 1715,
+      "sha256": "7ae46c766f129874ff5f9feb2837049d156aa245601e4940eb0a771abf8491b2"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/RUN_COMPLETE.json",
+      "bytes": 268,
+      "sha256": "f4b0d5c437ac75484c81d2abc37f8d0e5089b206ce3a879ef7e72530715852e3"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/prep_v3/reports/data_prep_final_report.json",
+      "bytes": 14301,
+      "sha256": "054e30a1aeee9e97e28fb72d28fcbf53bd4abf1095d36c36e0e4196de29696bd"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/prep_v3/reports/data_prep_final_report.md",
+      "bytes": 7147,
+      "sha256": "ae06301a57e2084a08376e195d4ad1ce817fb3ac330f180405211b5bb2881bf1"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/prep_v3/reports/client_non_iid_diagnostics.csv",
+      "bytes": 362,
+      "sha256": "c226c185df20d73290cfa42085b30ed4ddd8089616c530b6f65b22971cd3a18e"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/prep_v3/configs/feature_groups.json",
+      "bytes": 3246,
+      "sha256": "b7dd9821645969af5d1e724ec56757bad408d52eb49d25d65e9c0901c82bdd7a"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/prep_v3/configs/preprocessing_protocol.json",
+      "bytes": 946,
+      "sha256": "7d5a2c6f0788cd88ab90f8ec4386cca4f9c1ff665ff94f44d22938b15ad4a195"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/v3_diagnostics_baselines/results/development_factory_cv.csv",
+      "bytes": 4419,
+      "sha256": "8c586459f1b540a5067bf4a6e76b0386efe1d55df2f65da73244966a07317531"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/v3_diagnostics_baselines/results/development_factory_cv_summary.csv",
+      "bytes": 758,
+      "sha256": "9eb4600e1ffe071ad073a399525badfb8d5ebcd903aab4e7dc645a309f93c5ce"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/v3_diagnostics_baselines/reports/development_selection_lock.json",
+      "bytes": 1008,
+      "sha256": "351e387624db017c6da34caaba7d2e2fead25444f2c3bb2c4bbcd4b7775759bc"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/v3_federated/results/federated_lofo_scores.csv",
+      "bytes": 2822,
+      "sha256": "160808476e0a24f1cfcdef8c89fe541bea593ebd86d343a7de64d0ddb58d52b9"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/v3_federated/results/federated_lofo_summary.csv",
+      "bytes": 1047,
+      "sha256": "424698f2873d099ad137a6fedc91cbb3675b806a32bf3000612a33691c78a4fd"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/v3_federated/reports/frozen_development_selection.json",
+      "bytes": 1966,
+      "sha256": "16966643b380e7c36311782d4e5f74547510b35be5ad60f4c6dcee84f99bec23"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/v3_federated/reports/dp_release_manifest.json",
+      "bytes": 2044,
+      "sha256": "cb8363dfd29e45491d3b32efd9b78714e2423a1d2447ca925604d25eb0e80cf2"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/v3_federated/reports/privacy_utility_result.json",
+      "bytes": 397,
+      "sha256": "d80200488d6dd764af044d39818c37864b9d02ffd10ba08f1c04a01183d44230"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/v3_federated/reports/dp_vs_nonprivate_paired_bootstrap.json",
+      "bytes": 321,
+      "sha256": "8014369df7129c7834888b863526845cdce26a4ed5a1b1aab6e116a7f8a4f04d"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/ontology/fedkg_shared_ontology.ttl",
+      "bytes": 7083,
+      "sha256": "2688780e3955fbe0314305b5a3f138613e32f7a4e3fffc7acb1da2e33e19f402"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/ontology/fedkg_shared_ontology.json",
+      "bytes": 4325,
+      "sha256": "d41a9be0ede45a66413068656039b054da0b1610147ac4defb6fd3f9fc587acd"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/reports/factory_graph_statistics.csv",
+      "bytes": 980,
+      "sha256": "14e313fff9bbecb0a723e05fa9406845989ccea983c427cbbfa498fabfb4aebe"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/reports/integrated_kg_audit.json",
+      "bytes": 8288,
+      "sha256": "9ed0ee816539201790caada810425f916fb51d672eadea2fbb15cb9bb0dc3667"
+    },
+    {
+      "path": "unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/reports/phase4_kg_validation_checks.csv",
+      "bytes": 2600,
+      "sha256": "f327549ce7a794b50bb22a36ecbdeab1ccc819af554558bb5ad1200768ce73ec"
+    },
+    {
+      "path": "unified_runs/phaseB_development_v1/reports/B_development_report.json",
+      "bytes": 3109,
+      "sha256": "9c5159e26374038dd90d5fc6aa75e7a9a7e4937d26a994eba85fbca8e9505170"
+    },
+    {
+      "path": "unified_runs/phaseB_development_v1/reports/B_development_report.md",
+      "bytes": 1830,
+      "sha256": "85e9338252ae4ba931b1eaef2745aea41540b710bb929fe50e52ab7476977516"
+    },
+    {
+      "path": "unified_runs/phaseB_development_v1/results/B1_early_warning_operational_metrics.csv",
+      "bytes": 6555,
+      "sha256": "16479b139e353d8f94b1b4df1f49c0e36d596266dfd6b6557b9682fed0ce83e1"
+    },
+    {
+      "path": "unified_runs/phaseB_development_v1/results/B1_hgb_lofo_fold_metrics.csv",
+      "bytes": 2086,
+      "sha256": "da0060b305828f7785d7fb6b735e1f0f055dfc9074b9f4299db5286be16cd89a"
+    },
+    {
+      "path": "unified_runs/phaseB_development_v1/results/B1_hgb_lofo_summary.csv",
+      "bytes": 428,
+      "sha256": "1c7f33a0d26ee399f201021189cf19fefc0cf7ceb24382767d83aa3d94da85d0"
+    },
+    {
+      "path": "unified_runs/phaseB_development_v1/results/B2_federated_temporal_fold_metrics.csv",
+      "bytes": 2847,
+      "sha256": "0b3d6b8ad0ab8c0873a3b0e2beefd32125e24c3c57b4354df0ec719edbfa7e77"
+    },
+    {
+      "path": "unified_runs/phaseB_development_v1/results/B2_federated_temporal_summary.csv",
+      "bytes": 232,
+      "sha256": "eae842d9ba78ad3cd98ea034bb11f088df6978b332a8cbaba110d7cb0d7d317b"
+    },
+    {
+      "path": "unified_runs/phaseB_development_v1/results/B2_temporal_early_warning_metrics.csv",
+      "bytes": 9320,
+      "sha256": "39254de6ef97d1b139fa3cc6a4fb51ada36347432b577288122791bfc1229332"
+    },
+    {
+      "path": "unified_runs/phaseB_development_v1/results/B3_paired_MLP_LSTM_delta.csv",
+      "bytes": 603,
+      "sha256": "2c2b0a6c6765fadaa472248e7cf29b05a015c94ace9619369f6d96345cec30ae"
+    },
+    {
+      "path": "unified_runs/phaseB_development_v1/B_COMPLETE.json",
+      "bytes": 122,
+      "sha256": "54754480e48b43f51b91b26d3aeed7d8c33e9c65dd90bcc66025c8774b0c60b4"
+    },
+    {
+      "path": "unified_runs/phaseB4_generalization_pilot_v1/reports/B4_generalization_decision.json",
+      "bytes": 8331,
+      "sha256": "30de01daf8ca1429479249130be6fc187b599e0ea6e15829d521fa117e0183c3"
+    },
+    {
+      "path": "unified_runs/phaseB4_generalization_pilot_v1/reports/B4_generalization_decision.md",
+      "bytes": 6442,
+      "sha256": "b839a22013a9ee5967f16d740cf5653715c47bf423f739687f41a39a27308e9b"
+    },
+    {
+      "path": "unified_runs/phaseB4_generalization_pilot_v1/results/B4_cross_fold_alert_metrics.csv",
+      "bytes": 4488,
+      "sha256": "48e8d73ee0ce883da5699bd16010792b18bc7c73af58b8a42838b108022f71dd"
+    },
+    {
+      "path": "unified_runs/phaseB4_generalization_pilot_v1/results/B4_factory_profiles.csv",
+      "bytes": 556,
+      "sha256": "02f1b7730ca2d110e12d86b0ae3ef48ab1774134ae15be111e933735901f9403"
+    },
+    {
+      "path": "unified_runs/phaseB4_generalization_pilot_v1/results/B4_model_fold_metrics.csv",
+      "bytes": 7397,
+      "sha256": "e4f48ea8d419bec27c2b8ec2438aacbf28e17b8b5cce54c7a036ab8af9fdeec4"
+    },
+    {
+      "path": "unified_runs/phaseB4_generalization_pilot_v1/results/B4_model_summary.csv",
+      "bytes": 759,
+      "sha256": "ef9cddcc6532084b410822c47d28593338400f59ee91e1ef7cf7a115167554c8"
+    },
+    {
+      "path": "unified_runs/phaseB4_generalization_pilot_v1/results/B4_operational_summary.csv",
+      "bytes": 1043,
+      "sha256": "fce03c24a34b438e0f93ea17ec36d62ec682b1e97d9d435004c45bae145eb5fc"
+    },
+    {
+      "path": "unified_runs/phaseB4_generalization_pilot_v1/results/B4_paired_LSTM_minus_MLP.csv",
+      "bytes": 1065,
+      "sha256": "2fe92dcb95db561dfb01045ab7573c8d9c31d6ce12741c9973887aaaafdb0070"
+    },
+    {
+      "path": "unified_runs/phaseB4_generalization_pilot_v1/results/B4_ranked_dev_candidates.csv",
+      "bytes": 1674,
+      "sha256": "d0d400ecc3e0828d28cfddf803f547e7617bf750b37bce1db5429318a3d3a21a"
+    },
+    {
+      "path": "unified_runs/phaseB4_generalization_pilot_v1/results/B4_raw_feature_shift.csv",
+      "bytes": 23667,
+      "sha256": "3f966ad85c6479df3a0d174c7d534de0dcc8620d9268b50729e6f71d46265af6"
+    },
+    {
+      "path": "unified_runs/phaseB4_generalization_pilot_v1/B4_COMPLETE.json",
+      "bytes": 158,
+      "sha256": "8db3575524264603748545726bd475f913e737a7083f9c5915ca1ba494e2eed5"
+    },
+    {
+      "path": "unified_runs/phaseB4_generalization_pilot_v1/experiment_lock.json",
+      "bytes": 1086,
+      "sha256": "b2b145b50eea96eadf18ad612374f8c25e0f518ce301c4ba371c79484be50bd2"
+    },
+    {
+      "path": "unified_runs/phase5_groq_grounded_v1/reports/PHASE5_REPORT.json",
+      "bytes": 1523,
+      "sha256": "71e413fe5b3e5ad0c6efce2216866a22f816394a716ec27eab9c57373865b11f"
+    },
+    {
+      "path": "unified_runs/phase5_groq_grounded_v1/reports/PHASE5_REPORT.md",
+      "bytes": 1519,
+      "sha256": "99750587501d5e4335f6b70b1af09c74b96c052d6f591fcd7f093fdc1318f155"
+    },
+    {
+      "path": "unified_runs/phase5_groq_grounded_v1/reports/PHASE5_STATUS.json",
+      "bytes": 98,
+      "sha256": "f05afd388740e49307351014d6e6c9771a8f0e1ca541a102042996f3974fd91f"
+    },
+    {
+      "path": "unified_runs/phase5_groq_grounded_v1/results/phase5_mechanical_metrics.csv",
+      "bytes": 1980,
+      "sha256": "95854fe6c98843dd345f7aeb6a150f82afd1acd99a79cd554db26a4f2a840eeb"
+    },
+    {
+      "path": "unified_runs/phase5_groq_grounded_v1/phase5_experiment_lock.json",
+      "bytes": 2673,
+      "sha256": "44495fcccd4f9b4b9cb24865254e7c2ea45df40cbe4cc84c5409b30262bf6bca"
+    },
+    {
+      "path": "unified_runs/fedkg_master_integration_v1/reports/MASTER_CLOSURE.json",
+      "bytes": 1904,
+      "sha256": "b9015ac5f24c3aa8bca3e53b7c1c794a4091869c91cb541c5da906d4119d348e"
+    },
+    {
+      "path": "unified_runs/fedkg_master_integration_v1/reports/MASTER_CLOSURE.md",
+      "bytes": 1566,
+      "sha256": "fa8c55d41dbf193e9ecab2a79404691025ac3fbe548c2fc2bda2cc7349f53bda"
+    }
+  ],
+  "missing": [],
+  "warning": "Review report content before publishing. No raw data, private Groq responses or model weights included."
+}

@@ -1,0 +1,10 @@
+{
+  "dp_validation_ap": 0.6808836661040643,
+  "nonprivate_selected_development_temporal_ap": 0.8158960729764572,
+  "dp_relative_utility": 0.8345225435638435,
+  "illustrative_relative_utility_gate": 0.8,
+  "meets_gate": true,
+  "private_epsilon_max": 0.6226875671831649,
+  "private_epsilon_cap": 10.0,
+  "scope_note": "conditional preprocessed row privacy ONLY, not raw-record or client-level DP"
+}

@@ -1,0 +1,43 @@
+{
+  "run_id": "unified_v3_final_20261025",
+  "version": "v3_final",
+  "integrity_checks": {
+    "source_hash_manifest": true,
+    "phase1_checks": true,
+    "canonical_factory_manifest": true,
+    "local_target_calibration_only": true,
+    "factory5_not_in_dev_train": true,
+    "four_factory_federated_lofo_cv": true,
+    "fedavg_fedprox_fedadam_all_cv": true,
+    "all_federated_features_count25": true,
+    "out_of_factory_threshold_frozen": true,
+    "reference_model_checkpoint_exists": true,
+    "private_model_checkpoint_exists": true,
+    "record_dp_accounting_within_predeclared_cap": true,
+    "data_label_feature_prediction_alignment": true,
+    "one_historical_site_evaluation_only": true,
+    "local_kg_structural_audit": true,
+    "time_safe_pred_to_kg_binding": true,
+    "type_shift_stress_ran": true,
+    "no_automated_claim_of_end_to_end_dp": true,
+    "nonprivate_controls_explicit": true
+  },
+  "integrity_all_pass": true,
+  "record_dp_privacy_cap_pass": true,
+  "record_dp_utility_gate_pass": true,
+  "non_dp_selected_method": "FedAvg",
+  "non_dp_selected_rounds": 18,
+  "heldout_factory_test_blind": false,
+  "privacy_scope": "conditional fixed processed-row sample-level DP-SGD; preprocessing and logs outside",
+  "no_secure_aggregation": true,
+  "azure_only": true,
+  "scientific_limitations": [
+    "one simulated source dataset",
+    "only four contributing silos",
+    "factory_5 examined in previous experiments",
+    "no true cryptographic secure aggregation",
+    "no end-to-end differential privacy of raw preprocessing, feature normalizers or graphs",
+    "NASA C-MAPSS remains outside Azure-only pipeline",
+    "tuning and nonprivate baselines not included in private release"
+  ]
+}

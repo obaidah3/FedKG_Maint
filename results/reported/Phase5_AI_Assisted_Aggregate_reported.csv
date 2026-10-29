@@ -1,0 +1,3 @@
+condition,cases,ai_mean_faithfulness,ai_mean_actionability,ai_mean_uncertainty,ai_unsafe_advice_flags,ai_unsupported_statements,mean_id_coverage,missing_evidence_ids,total_kg_ids_cited
+with_kg,12,3.9166666666666665,4.25,5.0,0,10,0.9924242424242425,0,127
+without_kg,12,5.0,3.3333333333333335,5.0,0,0,0.9392857142857144,0,0

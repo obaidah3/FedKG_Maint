@@ -1,0 +1,87 @@
+{
+  "schema_version": "phase5_groq_v1",
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0.1,
+  "max_completion_tokens": 1200,
+  "reasoning_effort": "low",
+  "reasoning_format": "hidden",
+  "cases_count": 12,
+  "paired_calls": 24,
+  "case_selection": "LOFO 2%,50%,98% rank, unique machines per factory",
+  "source_sha256": {
+    "features": "b7dd9821645969af5d1e724ec56757bad408d52eb49d25d65e9c0901c82bdd7a",
+    "validation": "8823d0ce6ce9f8b50ef5b28903437512661d1945fe48991a24cae7d63a77cc6f",
+    "metrics": "e4f48ea8d419bec27c2b8ec2438aacbf28e17b8b5cce54c7a036ab8af9fdeec4",
+    "lock": "b2b145b50eea96eadf18ad612374f8c25e0f518ce301c4ba371c79484be50bd2",
+    "manifest": "cee75cc38032f993085a85a816d179f2b1caa6db01094ac97ff86e633eed7177",
+    "ontology": "2688780e3955fbe0314305b5a3f138613e32f7a4e3fffc7acb1da2e33e19f402",
+    "graph_1": "868e59f1005a0d4ab6a0f8f85a34cf843258d8d4de5ddd1ce1a8bf3bc1e41acb",
+    "graph_2": "26d0696f23f67d5f73cf20bc11161ec19aa109dc093310c2051c247418a83dcd",
+    "graph_3": "9a3cb333608df6c914a62eed128cd17f7742863e6ae837dbd597c8a44f0bb0e6",
+    "graph_4": "b6beeddc0f3ab73da52f7b62330b5edbe924edbf42dcea909663fb43282967f1"
+  },
+  "cases_sha256": "9ce4f62a0af1b3409e735c0636b24cd7eb5ea3f01c703f4792ea57a0e820ed5d",
+  "prompts_sha256": "7463f08474572be8951337f34721278a14c31450e0e079d9f4361e38e43a8fbd",
+  "output_json_schema": {
+    "type": "object",
+    "properties": {
+      "summary": {
+        "type": "string"
+      },
+      "claims": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "statement": {
+              "type": "string"
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "statement",
+            "evidence_ids"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "recommended_actions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "type": "string"
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "action",
+            "evidence_ids"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "uncertainty": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "summary",
+      "claims",
+      "recommended_actions",
+      "uncertainty"
+    ],
+    "additionalProperties": false
+  }
+}

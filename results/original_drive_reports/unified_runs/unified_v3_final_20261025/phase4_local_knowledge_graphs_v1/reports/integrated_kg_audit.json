@@ -1,0 +1,289 @@
+{
+  "graphs": [
+    {
+      "factory": "factory_1",
+      "machines": 20,
+      "daily_telemetry_nodes": 7320,
+      "error_occurrences": 797,
+      "maintenance_events": 650,
+      "failure_records": 191,
+      "rdf_triples": 162111,
+      "ttl_size_mb": 9.224,
+      "graph_path": "/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/graphs/factory_1.ttl"
+    },
+    {
+      "factory": "factory_2",
+      "machines": 20,
+      "daily_telemetry_nodes": 7320,
+      "error_occurrences": 796,
+      "maintenance_events": 650,
+      "failure_records": 161,
+      "rdf_triples": 161956,
+      "ttl_size_mb": 9.21,
+      "graph_path": "/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/graphs/factory_2.ttl"
+    },
+    {
+      "factory": "factory_3",
+      "machines": 20,
+      "daily_telemetry_nodes": 7320,
+      "error_occurrences": 789,
+      "maintenance_events": 655,
+      "failure_records": 147,
+      "rdf_triples": 161876,
+      "ttl_size_mb": 9.202,
+      "graph_path": "/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/graphs/factory_3.ttl"
+    },
+    {
+      "factory": "factory_4",
+      "machines": 20,
+      "daily_telemetry_nodes": 7320,
+      "error_occurrences": 717,
+      "maintenance_events": 657,
+      "failure_records": 130,
+      "rdf_triples": 161441,
+      "ttl_size_mb": 9.16,
+      "graph_path": "/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/graphs/factory_4.ttl"
+    },
+    {
+      "factory": "factory_5",
+      "machines": 20,
+      "daily_telemetry_nodes": 7320,
+      "error_occurrences": 820,
+      "maintenance_events": 674,
+      "failure_records": 132,
+      "rdf_triples": 162051,
+      "ttl_size_mb": 9.217,
+      "graph_path": "/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/graphs/factory_5.ttl"
+    }
+  ],
+  "structural_checks": [
+    {
+      "check": "V1 source dataset is Azure tables only",
+      "status": "PASS",
+      "detail": "No NASA C-MAPSS input is loaded in this notebook."
+    },
+    {
+      "check": "V2 five expected factory partitions are present",
+      "status": "PASS",
+      "detail": "['factory_1', 'factory_2', 'factory_3', 'factory_4', 'factory_5']"
+    },
+    {
+      "check": "V3 each source machine maps to exactly one factory",
+      "status": "PASS",
+      "detail": "mapped machines=100"
+    },
+    {
+      "check": "V4 machine coverage matches the source inventory",
+      "status": "PASS",
+      "detail": "source inventory machines=100"
+    },
+    {
+      "check": "V5 shared ontology file exists",
+      "status": "PASS",
+      "detail": "ontology triples=151"
+    },
+    {
+      "check": "V6 all local graph files exist",
+      "status": "PASS",
+      "detail": "one RDF/Turtle file per factory"
+    },
+    {
+      "check": "V7 factory_1 machine isolation",
+      "status": "PASS",
+      "detail": "expected=20 actual=20"
+    },
+    {
+      "check": "V8 factory_1 error events linked",
+      "status": "PASS",
+      "detail": "events=797 broken=0"
+    },
+    {
+      "check": "V9 factory_1 maintenance events linked",
+      "status": "PASS",
+      "detail": "events=650 broken=0"
+    },
+    {
+      "check": "V10 factory_1 failure records linked",
+      "status": "PASS",
+      "detail": "events=191 broken=0"
+    },
+    {
+      "check": "V11 factory_1 daily telemetry linked",
+      "status": "PASS",
+      "detail": "summaries=7320 broken=0"
+    },
+    {
+      "check": "V12 factory_1 ontology avoids unsupported causal edges",
+      "status": "PASS",
+      "detail": "relationships express observations/records only"
+    },
+    {
+      "check": "V7 factory_2 machine isolation",
+      "status": "PASS",
+      "detail": "expected=20 actual=20"
+    },
+    {
+      "check": "V8 factory_2 error events linked",
+      "status": "PASS",
+      "detail": "events=796 broken=0"
+    },
+    {
+      "check": "V9 factory_2 maintenance events linked",
+      "status": "PASS",
+      "detail": "events=650 broken=0"
+    },
+    {
+      "check": "V10 factory_2 failure records linked",
+      "status": "PASS",
+      "detail": "events=161 broken=0"
+    },
+    {
+      "check": "V11 factory_2 daily telemetry linked",
+      "status": "PASS",
+      "detail": "summaries=7320 broken=0"
+    },
+    {
+      "check": "V12 factory_2 ontology avoids unsupported causal edges",
+      "status": "PASS",
+      "detail": "relationships express observations/records only"
+    },
+    {
+      "check": "V7 factory_3 machine isolation",
+      "status": "PASS",
+      "detail": "expected=20 actual=20"
+    },
+    {
+      "check": "V8 factory_3 error events linked",
+      "status": "PASS",
+      "detail": "events=789 broken=0"
+    },
+    {
+      "check": "V9 factory_3 maintenance events linked",
+      "status": "PASS",
+      "detail": "events=655 broken=0"
+    },
+    {
+      "check": "V10 factory_3 failure records linked",
+      "status": "PASS",
+      "detail": "events=147 broken=0"
+    },
+    {
+      "check": "V11 factory_3 daily telemetry linked",
+      "status": "PASS",
+      "detail": "summaries=7320 broken=0"
+    },
+    {
+      "check": "V12 factory_3 ontology avoids unsupported causal edges",
+      "status": "PASS",
+      "detail": "relationships express observations/records only"
+    },
+    {
+      "check": "V7 factory_4 machine isolation",
+      "status": "PASS",
+      "detail": "expected=20 actual=20"
+    },
+    {
+      "check": "V8 factory_4 error events linked",
+      "status": "PASS",
+      "detail": "events=717 broken=0"
+    },
+    {
+      "check": "V9 factory_4 maintenance events linked",
+      "status": "PASS",
+      "detail": "events=657 broken=0"
+    },
+    {
+      "check": "V10 factory_4 failure records linked",
+      "status": "PASS",
+      "detail": "events=130 broken=0"
+    },
+    {
+      "check": "V11 factory_4 daily telemetry linked",
+      "status": "PASS",
+      "detail": "summaries=7320 broken=0"
+    },
+    {
+      "check": "V12 factory_4 ontology avoids unsupported causal edges",
+      "status": "PASS",
+      "detail": "relationships express observations/records only"
+    },
+    {
+      "check": "V7 factory_5 machine isolation",
+      "status": "PASS",
+      "detail": "expected=20 actual=20"
+    },
+    {
+      "check": "V8 factory_5 error events linked",
+      "status": "PASS",
+      "detail": "events=820 broken=0"
+    },
+    {
+      "check": "V9 factory_5 maintenance events linked",
+      "status": "PASS",
+      "detail": "events=674 broken=0"
+    },
+    {
+      "check": "V10 factory_5 failure records linked",
+      "status": "PASS",
+      "detail": "events=132 broken=0"
+    },
+    {
+      "check": "V11 factory_5 daily telemetry linked",
+      "status": "PASS",
+      "detail": "summaries=7320 broken=0"
+    },
+    {
+      "check": "V12 factory_5 ontology avoids unsupported causal edges",
+      "status": "PASS",
+      "detail": "relationships express observations/records only"
+    }
+  ],
+  "asof_checks": [
+    {
+      "check": "KG-A Manifest unchanged",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "KG-B factory_1 isolation",
+      "status": "PASS",
+      "detail": "20 machines"
+    },
+    {
+      "check": "KG-B factory_2 isolation",
+      "status": "PASS",
+      "detail": "20 machines"
+    },
+    {
+      "check": "KG-B factory_3 isolation",
+      "status": "PASS",
+      "detail": "20 machines"
+    },
+    {
+      "check": "KG-B factory_4 isolation",
+      "status": "PASS",
+      "detail": "20 machines"
+    },
+    {
+      "check": "KG-B factory_5 isolation",
+      "status": "PASS",
+      "detail": "20 machines"
+    },
+    {
+      "check": "KG-C cross-factory access rejected",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "KG-D adversarial failure-time no-peek audit",
+      "status": "PASS",
+      "detail": "103 randomly spaced failure-time probes, strict earlier-than as_of"
+    }
+  ],
+  "limitations": [
+    "No causality inferred",
+    "Graph not used to train predictive classifier",
+    "Raw source data are centrally accessible in this Colab simulation",
+    "Only completed-day aggregates are retrievable"
+  ]
+}

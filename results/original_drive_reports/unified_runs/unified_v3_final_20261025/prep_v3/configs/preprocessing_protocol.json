@@ -1,0 +1,21 @@
+{
+  "method": "StandardScaler (per column), fitted in float64 on saved float32 feature values",
+  "policies": {
+    "global": "one scaler on pooled training rows of factories 1-4; applied to every evaluation split",
+    "local": "one scaler per client; held-out factory uses feature-only unlabeled rows before CALIBRATION_CUTOFF"
+  },
+  "held_out_calibration": {
+    "file": "processed/heldout_calibration_features.parquet",
+    "cutoff": "2015-07-02 06:00:00",
+    "fraction_of_timeline": 0.5,
+    "contains_target": false,
+    "evaluation_disjoint": true
+  },
+  "never_fitted_on": [
+    "validation rows for supervised clients",
+    "evaluation rows",
+    "any evaluation labels"
+  ],
+  "note_test_site_full": "Contains only held-out rows at/after CALIBRATION_CUTOFF; local scaler calibration rows are strictly earlier and saved without labels.",
+  "feature_set_selection": "select columns after scaling (feature_sets in feature_groups.json)"
+}

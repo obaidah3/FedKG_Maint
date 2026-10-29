@@ -1,0 +1,256 @@
+{
+  "phase": "B4 exploratory cross-factory development only",
+  "input_source_v3": "/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025",
+  "configuration": {
+    "mode": "pilot",
+    "seeds": [
+      42
+    ],
+    "rounds": 8,
+    "cap_per_training_client": 6000,
+    "batch_size": 512,
+    "window_hours": 24,
+    "learning_rate": 0.002,
+    "positive_weight_cap": 30.0,
+    "architectures": [
+      "MLP",
+      "LSTM"
+    ],
+    "feature_variants": [
+      "full",
+      "no_maintenance",
+      "sensor_history_only"
+    ],
+    "alert_budget_false_alarms_per_machine_day": 0.1,
+    "minimum_advance_notice_hours": 12,
+    "cooldown_hours": 24,
+    "source_hashes": {
+      "train.parquet": "b8dce37b63d6d7b97eeea79a4a05eef5452c07f89e8ecf3e112d3e10eee07bb5",
+      "validation.parquet": "8823d0ce6ce9f8b50ef5b28903437512661d1945fe48991a24cae7d63a77cc6f",
+      "feature_groups.json": "b7dd9821645969af5d1e724ec56757bad408d52eb49d25d65e9c0901c82bdd7a",
+      "factory_manifest.csv": "cee75cc38032f993085a85a816d179f2b1caa6db01094ac97ff86e633eed7177",
+      "PdM_failures.csv": "0c6c31a4fd52ef2df95ad7c44e8b0c8c32917bcef29ba5a1ba3ba45531ded3b7"
+    },
+    "selection_scope": "4-fold development LOFO only; no factory_5 data",
+    "privacy": "No DP mechanism for B4 model training or prediction outputs"
+  },
+  "files_unchanged": true,
+  "factory_5_used": false,
+  "all_model_runs_completed": 24,
+  "model_summary": [
+    {
+      "variant": "full",
+      "architecture": "LSTM",
+      "mean_ap": 0.7303228496150922,
+      "worst_fold_ap": 0.5292163245527015,
+      "sd_ap": 0.13788977940513264,
+      "mean_roc_auc": 0.9935097110333012,
+      "robust_score": 0.649880239590136
+    },
+    {
+      "variant": "full",
+      "architecture": "MLP",
+      "mean_ap": 0.7623082761460604,
+      "worst_fold_ap": 0.7421106280384655,
+      "sd_ap": 0.02421137795060507,
+      "mean_roc_auc": 0.9938340065643081,
+      "robust_score": 0.7542292169030225
+    },
+    {
+      "variant": "no_maintenance",
+      "architecture": "LSTM",
+      "mean_ap": 0.6057070534280926,
+      "worst_fold_ap": 0.3669892346961314,
+      "sd_ap": 0.16105073929453537,
+      "mean_roc_auc": 0.9893785784989555,
+      "robust_score": 0.5102199259353081
+    },
+    {
+      "variant": "no_maintenance",
+      "architecture": "MLP",
+      "mean_ap": 0.6136344172724065,
+      "worst_fold_ap": 0.5685916886871116,
+      "sd_ap": 0.04086325556406901,
+      "mean_roc_auc": 0.9893564578732643,
+      "robust_score": 0.5956173258382885
+    },
+    {
+      "variant": "sensor_history_only",
+      "architecture": "LSTM",
+      "mean_ap": 0.24253319492447178,
+      "worst_fold_ap": 0.12709346531718485,
+      "sd_ap": 0.11471437692324139,
+      "mean_roc_auc": 0.967694213120756,
+      "robust_score": 0.196357303081557
+    },
+    {
+      "variant": "sensor_history_only",
+      "architecture": "MLP",
+      "mean_ap": 0.2811635815195171,
+      "worst_fold_ap": 0.18562610083419048,
+      "sd_ap": 0.07830308294548217,
+      "mean_roc_auc": 0.9653938051627005,
+      "robust_score": 0.24294858924538645
+    }
+  ],
+  "operational_summary": [
+    {
+      "variant": "full",
+      "architecture": "LSTM",
+      "mean_test_far": 0.01995163240628779,
+      "mean_test_event_recall": 0.7740041208791208,
+      "min_test_event_recall": 0.7142857142857143,
+      "total_detected_events": 36,
+      "total_eligible_events": 46,
+      "total_false_alerts": 55,
+      "total_machine_days": 2756.6666666666665,
+      "pooled_event_recall": 0.782608695652174,
+      "pooled_far": 0.01995163240628779
+    },
+    {
+      "variant": "full",
+      "architecture": "MLP",
+      "mean_test_far": 0.009794437726723096,
+      "mean_test_event_recall": 0.8990384615384616,
+      "min_test_event_recall": 0.75,
+      "total_detected_events": 40,
+      "total_eligible_events": 46,
+      "total_false_alerts": 27,
+      "total_machine_days": 2756.6666666666665,
+      "pooled_event_recall": 0.8695652173913043,
+      "pooled_far": 0.009794437726723096
+    },
+    {
+      "variant": "no_maintenance",
+      "architecture": "LSTM",
+      "mean_test_far": 0.03409915356711004,
+      "mean_test_event_recall": 0.8437156593406594,
+      "min_test_event_recall": 0.7142857142857143,
+      "total_detected_events": 40,
+      "total_eligible_events": 46,
+      "total_false_alerts": 94,
+      "total_machine_days": 2756.6666666666665,
+      "pooled_event_recall": 0.8695652173913043,
+      "pooled_far": 0.03409915356711004
+    },
+    {
+      "variant": "no_maintenance",
+      "architecture": "MLP",
+      "mean_test_far": 0.011608222490931077,
+      "mean_test_event_recall": 0.8954326923076923,
+      "min_test_event_recall": 0.7692307692307693,
+      "total_detected_events": 40,
+      "total_eligible_events": 46,
+      "total_false_alerts": 32,
+      "total_machine_days": 2756.6666666666665,
+      "pooled_event_recall": 0.8695652173913043,
+      "pooled_far": 0.011608222490931077
+    },
+    {
+      "variant": "sensor_history_only",
+      "architecture": "LSTM",
+      "mean_test_far": 0.06493349455864571,
+      "mean_test_event_recall": 0.4385302197802198,
+      "min_test_event_recall": 0.3076923076923077,
+      "total_detected_events": 19,
+      "total_eligible_events": 46,
+      "total_false_alerts": 179,
+      "total_machine_days": 2756.6666666666665,
+      "pooled_event_recall": 0.41304347826086957,
+      "pooled_far": 0.06493349455864571
+    },
+    {
+      "variant": "sensor_history_only",
+      "architecture": "MLP",
+      "mean_test_far": 0.08016928657799274,
+      "mean_test_event_recall": 0.34835164835164834,
+      "min_test_event_recall": 0.2857142857142857,
+      "total_detected_events": 17,
+      "total_eligible_events": 46,
+      "total_false_alerts": 221,
+      "total_machine_days": 2756.6666666666665,
+      "pooled_event_recall": 0.3695652173913043,
+      "pooled_far": 0.08016928657799274
+    }
+  ],
+  "paired_diff_per_feature_variant": [
+    {
+      "variant": "full",
+      "mean": -0.0319854265309682,
+      "min": -0.21924477311660062,
+      "max": 0.04588137062053688
+    },
+    {
+      "variant": "no_maintenance",
+      "mean": -0.007927363844313903,
+      "min": -0.27177976865868564,
+      "max": 0.10072177863933063
+    },
+    {
+      "variant": "sensor_history_only",
+      "mean": -0.0386303865950453,
+      "min": -0.1376157417179545,
+      "max": 0.06242504998094006
+    }
+  ],
+  "candidate_ranked_by_worst_site_first": [
+    {
+      "architecture": "MLP",
+      "variant": "full",
+      "worst_fold_ap": 0.7421106280384655,
+      "mean_ap": 0.7623082761460604,
+      "pooled_event_recall": 0.8695652173913043,
+      "pooled_far": 0.009794437726723096
+    },
+    {
+      "architecture": "MLP",
+      "variant": "no_maintenance",
+      "worst_fold_ap": 0.5685916886871116,
+      "mean_ap": 0.6136344172724065,
+      "pooled_event_recall": 0.8695652173913043,
+      "pooled_far": 0.011608222490931077
+    },
+    {
+      "architecture": "LSTM",
+      "variant": "full",
+      "worst_fold_ap": 0.5292163245527015,
+      "mean_ap": 0.7303228496150922,
+      "pooled_event_recall": 0.782608695652174,
+      "pooled_far": 0.01995163240628779
+    },
+    {
+      "architecture": "LSTM",
+      "variant": "no_maintenance",
+      "worst_fold_ap": 0.3669892346961314,
+      "mean_ap": 0.6057070534280926,
+      "pooled_event_recall": 0.8695652173913043,
+      "pooled_far": 0.03409915356711004
+    },
+    {
+      "architecture": "MLP",
+      "variant": "sensor_history_only",
+      "worst_fold_ap": 0.18562610083419048,
+      "mean_ap": 0.2811635815195171,
+      "pooled_event_recall": 0.3695652173913043,
+      "pooled_far": 0.08016928657799274
+    },
+    {
+      "architecture": "LSTM",
+      "variant": "sensor_history_only",
+      "worst_fold_ap": 0.12709346531718485,
+      "mean_ap": 0.24253319492447178,
+      "pooled_event_recall": 0.41304347826086957,
+      "pooled_far": 0.06493349455864571
+    }
+  ],
+  "chosen_final_model": null,
+  "not_claimed": [
+    "Fresh independent factory_5 test",
+    "End-to-end DP",
+    "Any cryptographic secure aggregation",
+    "NASA performance",
+    "LLM benefits",
+    "Causal link between maintenance and failure"
+  ],
+  "next_step": "Inspect factory_4 degradation and cross-fold FAR; lock a candidate on development, then compare matched DP/non-DP and validate on new independent test data."
+}

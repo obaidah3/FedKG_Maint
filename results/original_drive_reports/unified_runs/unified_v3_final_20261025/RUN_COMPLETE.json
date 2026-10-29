@@ -1,0 +1,10 @@
+{
+  "run_id": "unified_v3_final_20261025",
+  "state": "PIPELINE_EXECUTED",
+  "integrity_passed": true,
+  "dp_utility_satisfactory": true,
+  "version": "v3_final",
+  "historical_test_not_blind": true,
+  "report": "FINAL_V3_REPORT.md",
+  "audit": "FINAL_V3_AUDIT.json"
+}

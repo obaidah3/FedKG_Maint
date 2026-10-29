@@ -1,0 +1,5 @@
+client_id,train_rows,positive_rows,positive_prevalence,model_mix_model1,model_mix_model2,model_mix_model3,model_mix_model4
+factory_1,139300,3454,0.0247954055994257,0.4,0.2,0.2,0.2
+factory_2,139300,2958,0.021234745154343145,0.2,0.35,0.25,0.2
+factory_3,139300,2807,0.02015075376884422,0.1,0.15,0.5,0.25
+factory_4,139300,2445,0.017552045944005744,0.05,0.1,0.4,0.45

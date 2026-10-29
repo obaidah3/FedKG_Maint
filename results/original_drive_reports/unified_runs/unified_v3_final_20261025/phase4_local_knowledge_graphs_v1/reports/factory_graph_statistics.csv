@@ -1,0 +1,6 @@
+factory,machines,daily_telemetry_nodes,error_occurrences,maintenance_events,failure_records,rdf_triples,ttl_size_mb,graph_path
+factory_1,20,7320,797,650,191,162111,9.224,/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/graphs/factory_1.ttl
+factory_2,20,7320,796,650,161,161956,9.21,/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/graphs/factory_2.ttl
+factory_3,20,7320,789,655,147,161876,9.202,/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/graphs/factory_3.ttl
+factory_4,20,7320,717,657,130,161441,9.16,/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/graphs/factory_4.ttl
+factory_5,20,7320,820,674,132,162051,9.217,/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/graphs/factory_5.ttl

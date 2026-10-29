@@ -1,0 +1,125 @@
+{
+  "groups": {
+    "sensor_raw": [
+      "volt",
+      "rotate",
+      "pressure",
+      "vibration"
+    ],
+    "rolling_stats": [
+      "volt_past_mean_24h",
+      "volt_past_std_24h",
+      "volt_past_mean_7d",
+      "volt_past_std_7d",
+      "rotate_past_mean_24h",
+      "rotate_past_std_24h",
+      "rotate_past_mean_7d",
+      "rotate_past_std_7d",
+      "pressure_past_mean_24h",
+      "pressure_past_std_24h",
+      "pressure_past_mean_7d",
+      "pressure_past_std_7d",
+      "vibration_past_mean_24h",
+      "vibration_past_std_24h",
+      "vibration_past_mean_7d",
+      "vibration_past_std_7d"
+    ],
+    "error_recency": [
+      "hours_since_last_error_log1p",
+      "has_prior_error"
+    ],
+    "maintenance_recency": [
+      "hours_since_last_maintenance_log1p"
+    ],
+    "history_counts": [
+      "past_observation_count_24h",
+      "past_observation_count_7d"
+    ]
+  },
+  "feature_sets": {
+    "full": [
+      "volt",
+      "rotate",
+      "pressure",
+      "vibration",
+      "volt_past_mean_24h",
+      "volt_past_std_24h",
+      "volt_past_mean_7d",
+      "volt_past_std_7d",
+      "rotate_past_mean_24h",
+      "rotate_past_std_24h",
+      "rotate_past_mean_7d",
+      "rotate_past_std_7d",
+      "pressure_past_mean_24h",
+      "pressure_past_std_24h",
+      "pressure_past_mean_7d",
+      "pressure_past_std_7d",
+      "vibration_past_mean_24h",
+      "vibration_past_std_24h",
+      "vibration_past_mean_7d",
+      "vibration_past_std_7d",
+      "hours_since_last_error_log1p",
+      "has_prior_error",
+      "hours_since_last_maintenance_log1p",
+      "past_observation_count_24h",
+      "past_observation_count_7d"
+    ],
+    "no_maintenance": [
+      "volt",
+      "rotate",
+      "pressure",
+      "vibration",
+      "volt_past_mean_24h",
+      "volt_past_std_24h",
+      "volt_past_mean_7d",
+      "volt_past_std_7d",
+      "rotate_past_mean_24h",
+      "rotate_past_std_24h",
+      "rotate_past_mean_7d",
+      "rotate_past_std_7d",
+      "pressure_past_mean_24h",
+      "pressure_past_std_24h",
+      "pressure_past_mean_7d",
+      "pressure_past_std_7d",
+      "vibration_past_mean_24h",
+      "vibration_past_std_24h",
+      "vibration_past_mean_7d",
+      "vibration_past_std_7d",
+      "hours_since_last_error_log1p",
+      "has_prior_error",
+      "past_observation_count_24h",
+      "past_observation_count_7d"
+    ]
+  },
+  "primary_feature_set": "full",
+  "ablation_feature_set": "no_maintenance",
+  "excluded_constant_features": [
+    "has_prior_maintenance"
+  ],
+  "identifier_columns": [
+    "datetime",
+    "machineID",
+    "client_id"
+  ],
+  "target": "label_failure_24h",
+  "error_recency_sentinel_hours": 1654.0,
+  "missing_history_rules": {
+    "rolling_mean": "current sensor reading",
+    "rolling_std": 0.0,
+    "no_prior_error": "training-only sentinel + has_prior_error indicator",
+    "recency": "log1p",
+    "rolling_windows_rows": {
+      "24h": 24,
+      "7d": 168
+    }
+  },
+  "boundaries": {
+    "train_cutoff": "2015-10-18 11:00:00",
+    "val_start": "2015-10-19 11:00:00",
+    "val_cutoff": "2015-11-23 21:00:00",
+    "test_start": "2015-11-24 21:00:00",
+    "held_out_calibration_cutoff": "2015-07-02 06:00:00",
+    "held_out_calibration_fraction": 0.5,
+    "horizon_hours": 24
+  }
+}

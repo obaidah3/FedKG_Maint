@@ -1,0 +1,60 @@
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials.json
+service-account*.json
+secrets/
+**/private_internal/
+
+# Python / notebook execution
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Datasets and runtime outputs (NOT for automatic public GitHub upload)
+data/raw/
+data/processed/
+data/cache/
+/unified_runs/  # exclude root-level runtime only; allow curated research reports under results/
+runtime_outputs/
+outputs/
+artifacts/private/
+
+# Artifacts containing fitted data, graph triples, private evaluations, or model weights
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.ttl
+*.nt
+*.nq
+*.sqlite
+*.db
+*.zip
+*.tar
+*.gz
+*.7z
+
+# Logs and local reports
+*.log
+.DS_Store
+Thumbs.db
+
+# The shared ontology is a small, public schema (not a per-factory KG).
+!results/original_drive_reports/unified_runs/unified_v3_final_20261025/phase4_local_knowledge_graphs_v1/ontology/fedkg_shared_ontology.ttl

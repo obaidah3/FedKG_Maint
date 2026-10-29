@@ -1,0 +1,199 @@
+@prefix fedkg: <https://example.org/fedkg-maint/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://example.org/fedkg-maint/ontology> a owl:Ontology ;
+    rdfs:label "FedKG-Maint Shared Maintenance Ontology" .
+
+fedkg:belongsToFactory a owl:ObjectProperty ;
+    rdfs:label "belongsToFactory" ;
+    rdfs:comment "Factory assignment copied from Phase 1 metadata." ;
+    rdfs:domain fedkg:Machine ;
+    rdfs:range fedkg:Factory .
+
+fedkg:componentName a owl:DatatypeProperty ;
+    rdfs:label "componentName" ;
+    rdfs:comment "Component label from the source event record." .
+
+fedkg:dailyDate a owl:DatatypeProperty ;
+    rdfs:label "dailyDate" ;
+    rdfs:comment "Calendar date represented by a telemetry aggregate." .
+
+fedkg:errorCode a owl:DatatypeProperty ;
+    rdfs:label "errorCode" ;
+    rdfs:comment "Error identifier from the source event record." .
+
+fedkg:failureOfComponent a owl:ObjectProperty ;
+    rdfs:label "failureOfComponent" ;
+    rdfs:comment "Component label recorded for the failure." ;
+    rdfs:domain fedkg:FailureEvent ;
+    rdfs:range fedkg:Component .
+
+fedkg:hasDailyTelemetry a owl:ObjectProperty ;
+    rdfs:label "hasDailyTelemetry" ;
+    rdfs:comment "Daily telemetry summary for the machine." ;
+    rdfs:domain fedkg:Machine ;
+    rdfs:range fedkg:TelemetryDailySummary .
+
+fedkg:hasErrorCode a owl:ObjectProperty ;
+    rdfs:label "hasErrorCode" ;
+    rdfs:comment "Code recorded for an error occurrence." ;
+    rdfs:domain fedkg:ErrorOccurrence ;
+    rdfs:range fedkg:ErrorCode .
+
+fedkg:hasErrorOccurrence a owl:ObjectProperty ;
+    rdfs:label "hasErrorOccurrence" ;
+    rdfs:comment "Observed error event; not a causal assertion." ;
+    rdfs:domain fedkg:Machine ;
+    rdfs:range fedkg:ErrorOccurrence .
+
+fedkg:hasFailureEvent a owl:ObjectProperty ;
+    rdfs:label "hasFailureEvent" ;
+    rdfs:comment "Observed failure event." ;
+    rdfs:domain fedkg:Machine ;
+    rdfs:range fedkg:FailureEvent .
+
+fedkg:hasMachine a owl:ObjectProperty ;
+    rdfs:label "hasMachine" ;
+    rdfs:comment "Factory membership in this local graph." ;
+    rdfs:domain fedkg:Factory ;
+    rdfs:range fedkg:Machine .
+
+fedkg:hasMaintenanceEvent a owl:ObjectProperty ;
+    rdfs:label "hasMaintenanceEvent" ;
+    rdfs:comment "Observed maintenance event." ;
+    rdfs:domain fedkg:Machine ;
+    rdfs:range fedkg:MaintenanceEvent .
+
+fedkg:machineAge a owl:DatatypeProperty ;
+    rdfs:label "machineAge" ;
+    rdfs:comment "Machine age value from the source inventory." .
+
+fedkg:machineID a owl:DatatypeProperty ;
+    rdfs:label "machineID" ;
+    rdfs:comment "Identifier from the source machine inventory." .
+
+fedkg:modelName a owl:DatatypeProperty ;
+    rdfs:label "modelName" ;
+    rdfs:comment "Machine model category as recorded by the source." .
+
+fedkg:nSamples a owl:DatatypeProperty ;
+    rdfs:label "nSamples" ;
+    rdfs:comment "Number of raw telemetry rows in the daily aggregate." .
+
+fedkg:occurredAt a owl:DatatypeProperty ;
+    rdfs:label "occurredAt" ;
+    rdfs:comment "Source timestamp for an event." .
+
+fedkg:pressureMax a owl:DatatypeProperty ;
+    rdfs:label "pressureMax" ;
+    rdfs:comment "Daily max of the source telemetry field pressure." .
+
+fedkg:pressureMean a owl:DatatypeProperty ;
+    rdfs:label "pressureMean" ;
+    rdfs:comment "Daily mean of the source telemetry field pressure." .
+
+fedkg:pressureMin a owl:DatatypeProperty ;
+    rdfs:label "pressureMin" ;
+    rdfs:comment "Daily min of the source telemetry field pressure." .
+
+fedkg:pressureStd a owl:DatatypeProperty ;
+    rdfs:label "pressureStd" ;
+    rdfs:comment "Daily std of the source telemetry field pressure." .
+
+fedkg:rotateMax a owl:DatatypeProperty ;
+    rdfs:label "rotateMax" ;
+    rdfs:comment "Daily max of the source telemetry field rotate." .
+
+fedkg:rotateMean a owl:DatatypeProperty ;
+    rdfs:label "rotateMean" ;
+    rdfs:comment "Daily mean of the source telemetry field rotate." .
+
+fedkg:rotateMin a owl:DatatypeProperty ;
+    rdfs:label "rotateMin" ;
+    rdfs:comment "Daily min of the source telemetry field rotate." .
+
+fedkg:rotateStd a owl:DatatypeProperty ;
+    rdfs:label "rotateStd" ;
+    rdfs:comment "Daily std of the source telemetry field rotate." .
+
+fedkg:targetsComponent a owl:ObjectProperty ;
+    rdfs:label "targetsComponent" ;
+    rdfs:comment "Component named in the maintenance record." ;
+    rdfs:domain fedkg:MaintenanceEvent ;
+    rdfs:range fedkg:Component .
+
+fedkg:usesModel a owl:ObjectProperty ;
+    rdfs:label "usesModel" ;
+    rdfs:comment "Recorded model category." ;
+    rdfs:domain fedkg:Machine ;
+    rdfs:range fedkg:MachineModel .
+
+fedkg:vibrationMax a owl:DatatypeProperty ;
+    rdfs:label "vibrationMax" ;
+    rdfs:comment "Daily max of the source telemetry field vibration." .
+
+fedkg:vibrationMean a owl:DatatypeProperty ;
+    rdfs:label "vibrationMean" ;
+    rdfs:comment "Daily mean of the source telemetry field vibration." .
+
+fedkg:vibrationMin a owl:DatatypeProperty ;
+    rdfs:label "vibrationMin" ;
+    rdfs:comment "Daily min of the source telemetry field vibration." .
+
+fedkg:vibrationStd a owl:DatatypeProperty ;
+    rdfs:label "vibrationStd" ;
+    rdfs:comment "Daily std of the source telemetry field vibration." .
+
+fedkg:voltMax a owl:DatatypeProperty ;
+    rdfs:label "voltMax" ;
+    rdfs:comment "Daily max of the source telemetry field volt." .
+
+fedkg:voltMean a owl:DatatypeProperty ;
+    rdfs:label "voltMean" ;
+    rdfs:comment "Daily mean of the source telemetry field volt." .
+
+fedkg:voltMin a owl:DatatypeProperty ;
+    rdfs:label "voltMin" ;
+    rdfs:comment "Daily min of the source telemetry field volt." .
+
+fedkg:voltStd a owl:DatatypeProperty ;
+    rdfs:label "voltStd" ;
+    rdfs:comment "Daily std of the source telemetry field volt." .
+
+fedkg:ErrorCode a owl:Class ;
+    rdfs:label "ErrorCode" ;
+    rdfs:comment "An error code recorded by the source system." .
+
+fedkg:MachineModel a owl:Class ;
+    rdfs:label "MachineModel" ;
+    rdfs:comment "A model category recorded in the machine inventory." .
+
+fedkg:TelemetryDailySummary a owl:Class ;
+    rdfs:label "TelemetryDailySummary" ;
+    rdfs:comment "A per-machine, per-day aggregate of measured telemetry." .
+
+fedkg:Component a owl:Class ;
+    rdfs:label "Component" ;
+    rdfs:comment "A component name observed in maintenance or failure records." .
+
+fedkg:ErrorOccurrence a owl:Class ;
+    rdfs:label "ErrorOccurrence" ;
+    rdfs:comment "An observed error event with its source timestamp and error code." .
+
+fedkg:Factory a owl:Class ;
+    rdfs:label "Factory" ;
+    rdfs:comment "A factory partition used as a logical data boundary." .
+
+fedkg:FailureEvent a owl:Class ;
+    rdfs:label "FailureEvent" ;
+    rdfs:comment "An observed failure record from the source dataset." .
+
+fedkg:MaintenanceEvent a owl:Class ;
+    rdfs:label "MaintenanceEvent" ;
+    rdfs:comment "An observed maintenance record for a machine and component." .
+
+fedkg:Machine a owl:Class ;
+    rdfs:label "Machine" ;
+    rdfs:comment "An industrial machine from the Azure predictive-maintenance dataset." .
+

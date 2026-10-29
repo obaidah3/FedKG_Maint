@@ -1,0 +1,61 @@
+{
+  "version": "v3",
+  "run_id": "unified_v3_final_20261025",
+  "selection_source": "4-development-factory LOFO only",
+  "method": "FedAvg",
+  "rounds": 18,
+  "architecture": "25-32-8-1 MLP",
+  "feature_names": [
+    "volt",
+    "rotate",
+    "pressure",
+    "vibration",
+    "volt_past_mean_24h",
+    "volt_past_std_24h",
+    "volt_past_mean_7d",
+    "volt_past_std_7d",
+    "rotate_past_mean_24h",
+    "rotate_past_std_24h",
+    "rotate_past_mean_7d",
+    "rotate_past_std_7d",
+    "pressure_past_mean_24h",
+    "pressure_past_std_24h",
+    "pressure_past_mean_7d",
+    "pressure_past_std_7d",
+    "vibration_past_mean_24h",
+    "vibration_past_std_24h",
+    "vibration_past_mean_7d",
+    "vibration_past_std_7d",
+    "hours_since_last_error_log1p",
+    "has_prior_error",
+    "hours_since_last_maintenance_log1p",
+    "past_observation_count_24h",
+    "past_observation_count_7d"
+  ],
+  "normalization": "per-factory local StandardScaler",
+  "threshold": 0.920403778553009,
+  "candidate_grid": {
+    "methods": [
+      "FedAvg",
+      "FedProx",
+      "FedAdam"
+    ],
+    "rounds": [
+      6,
+      12,
+      18
+    ]
+  },
+  "selection_score": "0.6*mean_LOFO_PR_AUC + 0.4*worst_factory_LOFO_PR_AUC",
+  "primary_manifest_sha256": "cee75cc38032f993085a85a816d179f2b1caa6db01094ac97ff86e633eed7177",
+  "raw_hashes": {
+    "PdM_telemetry.csv": "d957f3c45bb83416b716600da8cffd72f4b6961db89867d9696ad19f7cb1bd4e",
+    "PdM_errors.csv": "9c2a2a010ad77227e2bb0c94e7971bca78810790ddd1f28a8bee4f12c2f62370",
+    "PdM_failures.csv": "0c6c31a4fd52ef2df95ad7c44e8b0c8c32917bcef29ba5a1ba3ba45531ded3b7",
+    "PdM_maint.csv": "481ed4e155f609e6ca6130754d2c035453093902a507cce5b3f3e235995f1db6",
+    "PdM_machines.csv": "5e8e1571c4999bf88abb7cae3925964c218d946fe851a9a100bb3d19330652bc"
+  },
+  "test_factory_previously_inspected": true,
+  "dp_is_separate_mechanism": true,
+  "qualification": "LOFO for Azure-simulated factories, not independently collected real external sites"
+}

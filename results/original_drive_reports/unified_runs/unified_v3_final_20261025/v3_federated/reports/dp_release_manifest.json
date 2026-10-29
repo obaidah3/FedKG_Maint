@@ -1,0 +1,60 @@
+{
+  "mechanism": "Poisson-subsampled per-example gradient clipping with Gaussian noise",
+  "adjacency": "add/remove one processed record with PUBLIC fixed Poisson sampling probability and fixed denominator; scaling held fixed",
+  "not_protecting": "factory participation, raw data, non-private scaler fit, labels and score releases outside this model, other baselines, KG data",
+  "not_end_to_end_raw_record_dp": true,
+  "not_client_level_dp": true,
+  "not_cryptographic_secure_aggregation": true,
+  "accountant": "Google dp_accounting RDP sampled Gaussian; per-factory composition; max epsilon",
+  "epsilon_by_factory": {
+    "factory_1": 0.6226875671831649,
+    "factory_2": 0.6226875671831649,
+    "factory_3": 0.6226875671831649,
+    "factory_4": 0.6226875671831649
+  },
+  "epsilon_max": 0.6226875671831649,
+  "delta": 1e-05,
+  "epsilon_cap": 10.0,
+  "privacy_cap_passed": true,
+  "sigma": 1.5,
+  "per_record_grad_clip": 1.0,
+  "rounds": 4,
+  "expected_batch": 768,
+  "private_steps_by_client": {
+    "factory_1": {
+      "q": 0.005513280689160086,
+      "steps_per_round": 182,
+      "rounds": 4,
+      "total_steps": 728,
+      "n_records_observed": 139300,
+      "public_nominal_records": 139300
+    },
+    "factory_2": {
+      "q": 0.005513280689160086,
+      "steps_per_round": 182,
+      "rounds": 4,
+      "total_steps": 728,
+      "n_records_observed": 139300,
+      "public_nominal_records": 139300
+    },
+    "factory_3": {
+      "q": 0.005513280689160086,
+      "steps_per_round": 182,
+      "rounds": 4,
+      "total_steps": 728,
+      "n_records_observed": 139300,
+      "public_nominal_records": 139300
+    },
+    "factory_4": {
+      "q": 0.005513280689160086,
+      "steps_per_round": 182,
+      "rounds": 4,
+      "total_steps": 728,
+      "n_records_observed": 139300,
+      "public_nominal_records": 139300
+    }
+  },
+  "release_policy": "only the private model checkpoint is in the DP release folder; all raw diagnostics and non-DP models are internal",
+  "research_only": true,
+  "historical_factory5_not_blind": true
+}

@@ -1,0 +1,7 @@
+variant,architecture,mean_ap,worst_fold_ap,sd_ap,mean_roc_auc,robust_score
+full,LSTM,0.730323,0.529216,0.13789,0.99351,0.64988
+full,MLP,0.762308,0.742111,0.024211,0.993834,0.754229
+no_maintenance,LSTM,0.605707,0.366989,0.161051,0.989379,0.51022
+no_maintenance,MLP,0.613634,0.568592,0.040863,0.989356,0.595617
+sensor_history_only,LSTM,0.242533,0.127093,0.114714,0.967694,0.196357
+sensor_history_only,MLP,0.281164,0.185626,0.078303,0.965394,0.242949

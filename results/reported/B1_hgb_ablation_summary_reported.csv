@@ -1,0 +1,5 @@
+variant,mean_pr_auc,min_pr_auc,std_pr_auc,source_scope
+full,0.975604,0.925217,0.033863,"User-shared Phase B1 output, 4 development LOFO folds"
+no_maintenance,0.776686,0.705921,0.049315,"User-shared Phase B1 output, 4 development LOFO folds"
+sensor_errors,0.776686,0.705921,0.049315,Same feature set as no_maintenance; not an independent ablation
+sensor_history_only,0.24421,0.194293,0.047646,"User-shared Phase B1 output, 4 development LOFO folds"

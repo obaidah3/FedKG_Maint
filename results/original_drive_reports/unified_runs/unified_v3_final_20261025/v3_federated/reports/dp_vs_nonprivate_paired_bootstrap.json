@@ -1,0 +1,9 @@
+{
+  "comparison": "record_dp_sgd_federated_mlp_one_release - MLP_FedAvg_seed42",
+  "point_diff_ap": -0.12227913083965436,
+  "machine_cluster_ci95": [
+    -0.18550051445163496,
+    -0.06144246893953563
+  ],
+  "interpretation": "Exploratory fixed-model uncertainty; not seed-level significance or new external validation"
+}

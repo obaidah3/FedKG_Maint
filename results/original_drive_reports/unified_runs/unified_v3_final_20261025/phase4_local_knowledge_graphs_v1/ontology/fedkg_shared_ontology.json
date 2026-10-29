@@ -1,0 +1,95 @@
+{
+  "ontology_iri": "https://example.org/fedkg-maint/ontology",
+  "namespace": "https://example.org/fedkg-maint/ontology#",
+  "classes": {
+    "Factory": "A factory partition used as a logical data boundary.",
+    "Machine": "An industrial machine from the Azure predictive-maintenance dataset.",
+    "MachineModel": "A model category recorded in the machine inventory.",
+    "Component": "A component name observed in maintenance or failure records.",
+    "ErrorCode": "An error code recorded by the source system.",
+    "ErrorOccurrence": "An observed error event with its source timestamp and error code.",
+    "MaintenanceEvent": "An observed maintenance record for a machine and component.",
+    "FailureEvent": "An observed failure record from the source dataset.",
+    "TelemetryDailySummary": "A per-machine, per-day aggregate of measured telemetry."
+  },
+  "object_properties": {
+    "hasMachine": {
+      "domain": "Factory",
+      "range": "Machine",
+      "description": "Factory membership in this local graph."
+    },
+    "belongsToFactory": {
+      "domain": "Machine",
+      "range": "Factory",
+      "description": "Factory assignment copied from Phase 1 metadata."
+    },
+    "usesModel": {
+      "domain": "Machine",
+      "range": "MachineModel",
+      "description": "Recorded model category."
+    },
+    "hasErrorOccurrence": {
+      "domain": "Machine",
+      "range": "ErrorOccurrence",
+      "description": "Observed error event; not a causal assertion."
+    },
+    "hasErrorCode": {
+      "domain": "ErrorOccurrence",
+      "range": "ErrorCode",
+      "description": "Code recorded for an error occurrence."
+    },
+    "hasMaintenanceEvent": {
+      "domain": "Machine",
+      "range": "MaintenanceEvent",
+      "description": "Observed maintenance event."
+    },
+    "targetsComponent": {
+      "domain": "MaintenanceEvent",
+      "range": "Component",
+      "description": "Component named in the maintenance record."
+    },
+    "hasFailureEvent": {
+      "domain": "Machine",
+      "range": "FailureEvent",
+      "description": "Observed failure event."
+    },
+    "failureOfComponent": {
+      "domain": "FailureEvent",
+      "range": "Component",
+      "description": "Component label recorded for the failure."
+    },
+    "hasDailyTelemetry": {
+      "domain": "Machine",
+      "range": "TelemetryDailySummary",
+      "description": "Daily telemetry summary for the machine."
+    }
+  },
+  "data_properties": {
+    "machineID": "Identifier from the source machine inventory.",
+    "modelName": "Machine model category as recorded by the source.",
+    "machineAge": "Machine age value from the source inventory.",
+    "errorCode": "Error identifier from the source event record.",
+    "componentName": "Component label from the source event record.",
+    "occurredAt": "Source timestamp for an event.",
+    "dailyDate": "Calendar date represented by a telemetry aggregate.",
+    "nSamples": "Number of raw telemetry rows in the daily aggregate.",
+    "voltMean": "Daily mean of the source telemetry field volt.",
+    "voltStd": "Daily std of the source telemetry field volt.",
+    "voltMin": "Daily min of the source telemetry field volt.",
+    "voltMax": "Daily max of the source telemetry field volt.",
+    "rotateMean": "Daily mean of the source telemetry field rotate.",
+    "rotateStd": "Daily std of the source telemetry field rotate.",
+    "rotateMin": "Daily min of the source telemetry field rotate.",
+    "rotateMax": "Daily max of the source telemetry field rotate.",
+    "pressureMean": "Daily mean of the source telemetry field pressure.",
+    "pressureStd": "Daily std of the source telemetry field pressure.",
+    "pressureMin": "Daily min of the source telemetry field pressure.",
+    "pressureMax": "Daily max of the source telemetry field pressure.",
+    "vibrationMean": "Daily mean of the source telemetry field vibration.",
+    "vibrationStd": "Daily std of the source telemetry field vibration.",
+    "vibrationMin": "Daily min of the source telemetry field vibration.",
+    "vibrationMax": "Daily max of the source telemetry field vibration."
+  },
+  "causal_assertions": "Not defined. Co-occurrence in these logs must not be described as proven causation.",
+  "temporal_rule": "For an explanation at time T, retrieve event and telemetry facts with timestamps <= T only."
+}

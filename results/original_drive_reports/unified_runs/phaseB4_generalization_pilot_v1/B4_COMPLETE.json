@@ -1,0 +1,7 @@
+{
+  "mode": "pilot",
+  "completed": true,
+  "source_hashes_verified": true,
+  "all_models": 24,
+  "decision_report": "reports/B4_generalization_decision.md"
+}

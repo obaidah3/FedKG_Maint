@@ -1,0 +1,39 @@
+{
+  "phase": "FedKG-Maint Phase 5 Groq API KG-grounded explanations",
+  "model": "openai/gpt-oss-120b",
+  "protocol_sha256": "3fe2e271bfad4cea7e23695e009605194e1cd7ef6221373890eb1d576290fa35",
+  "paired_cases_total": 12,
+  "successful_model_responses": 24,
+  "model_generation_complete": true,
+  "human_review_complete": false,
+  "human_reviewed_rows": 0,
+  "condition_mechanical_summary": [
+    {
+      "condition": "with_kg",
+      "number_of_explanations": 12,
+      "mean_citation_id_coverage": 0.9924242424242425,
+      "invalid_id_total": 0,
+      "kg_ids_cited_total": 127
+    },
+    {
+      "condition": "without_kg",
+      "number_of_explanations": 12,
+      "mean_citation_id_coverage": 0.9392857142857144,
+      "invalid_id_total": 0,
+      "kg_ids_cited_total": 0
+    }
+  ],
+  "human_evaluation_summary": [],
+  "cases_with_nonempty_kg": 12,
+  "model_training_performed": false,
+  "future_labels_sent_to_groq": false,
+  "factory5_read": false,
+  "privacy_of_B4_selected_model": "Not established by this phase",
+  "warnings": [
+    "Only 12 selected development cases; nonrandom engineering evaluation, no statistical superiority claim.",
+    "Valid citation IDs verify references exist, NOT that all generated assertions follow from them.",
+    "KG historical co-occurrence is not causal model attribution.",
+    "B4 predictions derive from four LOFO models, not one production-grade checkpoint.",
+    "Groq is a third-party API receiving synthetic/operational evidence; review data-sharing authorization."
+  ]
+}

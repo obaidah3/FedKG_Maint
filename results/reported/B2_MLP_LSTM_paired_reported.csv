@@ -1,0 +1,9 @@
+fold,seed,MLP_pr_auc,LSTM_pr_auc,LSTM_minus_MLP,source_scope
+factory_1,42,0.688289,0.772586,0.084297,User-shared Phase B2 development-only output
+factory_1,43,0.610663,0.753767,0.143104,User-shared Phase B2 development-only output
+factory_2,42,0.559035,0.643414,0.084379,User-shared Phase B2 development-only output
+factory_2,43,0.444428,0.666957,0.222529,User-shared Phase B2 development-only output
+factory_3,42,0.554044,0.69307,0.139026,User-shared Phase B2 development-only output
+factory_3,43,0.401261,0.625536,0.224275,User-shared Phase B2 development-only output
+factory_4,42,0.782326,0.212891,-0.569435,User-shared Phase B2 development-only output
+factory_4,43,0.549677,0.253664,-0.296013,User-shared Phase B2 development-only output

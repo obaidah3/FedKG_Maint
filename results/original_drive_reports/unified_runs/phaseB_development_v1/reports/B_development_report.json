@@ -1,0 +1,79 @@
+{
+  "study": "FedKG-Maint Plan B \u00b7 development-only improvement v1",
+  "source_v3": "/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025",
+  "source_hashes_verified_unchanged": {
+    "factory_manifest.csv": true,
+    "feature_groups.json": true,
+    "train.parquet": true,
+    "validation.parquet": true
+  },
+  "source_factory5_used_for_model_selection": false,
+  "purpose": "diagnose maintenance/history dependence, early-warning usefulness, and temporal federated improvement",
+  "client_partition": "v3 fixed mixed-model non-IID; four development factories only",
+  "hgb_ablation_summary": [
+    {
+      "variant": "full",
+      "mean_pr_auc": 0.9756036590471998,
+      "worst_factory_pr_auc": 0.9252174233107158,
+      "std_pr_auc": 0.033862982580721936,
+      "mean_roc_auc": 0.9995865250742374
+    },
+    {
+      "variant": "no_maintenance",
+      "mean_pr_auc": 0.776686223505851,
+      "worst_factory_pr_auc": 0.7059214541473785,
+      "std_pr_auc": 0.04931524781766486,
+      "mean_roc_auc": 0.9947051131580039
+    },
+    {
+      "variant": "sensor_errors",
+      "mean_pr_auc": 0.776686223505851,
+      "worst_factory_pr_auc": 0.7059214541473785,
+      "std_pr_auc": 0.04931524781766486,
+      "mean_roc_auc": 0.9947051131580039
+    },
+    {
+      "variant": "sensor_history_only",
+      "mean_pr_auc": 0.24421037368442094,
+      "worst_factory_pr_auc": 0.1942926414519661,
+      "std_pr_auc": 0.047645972202519704,
+      "mean_roc_auc": 0.9642132761521742
+    }
+  ],
+  "early_warning_table": "/content/drive/MyDrive/FedKG-Maint/unified_runs/phaseB_development_v1/results/B1_early_warning_operational_metrics.csv",
+  "temporal_federated_experiment_run": true,
+  "b2_summary": [
+    {
+      "architecture": "LSTM",
+      "mean_pr_auc": 0.5777355662962308,
+      "worst_fold_pr_auc": 0.21289071334555265,
+      "std_pr_auc": 0.21874620206914153,
+      "mean_roc_auc": 0.9837970294983585
+    },
+    {
+      "architecture": "MLP",
+      "mean_pr_auc": 0.5737154590192035,
+      "worst_fold_pr_auc": 0.40126077693778134,
+      "std_pr_auc": 0.12285129911062702,
+      "mean_roc_auc": 0.9857032400114278
+    }
+  ],
+  "b2_paired": {
+    "mean_delta_pr_auc_lstm_minus_mlp": 0.004020107277027243,
+    "median_delta_pr_auc": 0.11170233655031869,
+    "positive_pair_fraction": 0.75,
+    "n_paired_folds_and_seeds": 8,
+    "all_pairs_improved": false,
+    "interpretation": "Exploratory development-only LOFO; no significance or external blind-site claim"
+  },
+  "b2_operational_table": "/content/drive/MyDrive/FedKG-Maint/unified_runs/phaseB_development_v1/results/B2_temporal_early_warning_metrics.csv",
+  "not_demonstrated": [
+    "Fresh held-out-site performance",
+    "End-to-end differential privacy",
+    "Client-level privacy for new MLP/LSTM",
+    "End-to-end physical factory isolation",
+    "LLM explanation improvement",
+    "NASA RUL benchmark"
+  ],
+  "recommended_next_stage": "Inspect development ablation and operational metrics. Select a fixed protocol on dev folds before any additional site test; separately implement and evaluate DP for the chosen architecture."
+}

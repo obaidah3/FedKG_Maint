@@ -1,0 +1,17 @@
+# Research environment; use a fresh recent Python 3.10+ or Colab runtime.
+# Exact historic versions were not pinned in the original notebook run logs.
+numpy
+pandas
+scipy
+scikit-learn
+joblib
+pyarrow
+matplotlib
+torch
+rdflib
+dp-accounting
+kagglehub
+requests
+nbformat
+ipython
+groq

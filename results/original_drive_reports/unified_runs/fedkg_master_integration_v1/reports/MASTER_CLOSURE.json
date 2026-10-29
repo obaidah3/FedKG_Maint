@@ -1,0 +1,37 @@
+{
+  "project": "FedKG-Maint",
+  "integrated_sources": [
+    "Unified v3 Phases1–4",
+    "B1–B3 historical experiments",
+    "B4 pilot selected MLP"
+  ],
+  "prediction_architecture_decision": "FedAvg MLP 25→32→8→1, full 25-feature inputs",
+  "selection_protocol": "4 development-factory LOFO folds; B4 pilot, 8 rounds, seed42",
+  "mean_pr_auc_development": 0.7623082761460604,
+  "worst_pr_auc_development": 0.7421106280384655,
+  "event_recall_development": 0.8695652173913043,
+  "false_alarms_per_machine_day_development": 0.009794437726723,
+  "predictions_reconnected_and_verified": 66160,
+  "kg_paired_cases_built": 12,
+  "paired_prompts_prepared": 24,
+  "source_sha256": {
+    "v3_validation": "8823d0ce6ce9f8b50ef5b28903437512661d1945fe48991a24cae7d63a77cc6f",
+    "v3_manifest": "cee75cc38032f993085a85a816d179f2b1caa6db01094ac97ff86e633eed7177",
+    "v3_features": "b7dd9821645969af5d1e724ec56757bad408d52eb49d25d65e9c0901c82bdd7a",
+    "b4_model_metrics": "e4f48ea8d419bec27c2b8ec2438aacbf28e17b8b5cce54c7a036ab8af9fdeec4",
+    "b4_operational": "fce03c24a34b438e0f93ea17ec36d62ec682b1e97d9d435004c45bae145eb5fc",
+    "b4_lock": "b2b145b50eea96eadf18ad612374f8c25e0f518ce301c4ba371c79484be50bd2"
+  },
+  "llm_calls_executed": 0,
+  "privacy_B4_selected_model": "NONE; v3 conditional DP does not transfer",
+  "single_B4_final_deployable_checkpoint_available": false,
+  "nasa_rul_implemented": false,
+  "heldout_factory5_new_blind_evaluation": false,
+  "limits": [
+    "B4 single-seed pilot, exploratory development LOFO, no independent external factory",
+    "Histories from synthetic Azure data may introduce operationally unrealistic predictive signals",
+    "B4 stores scored folds, not a deployable four-client trained checkpoint",
+    "No end-to-end DP or cryptographic Secure Aggregation is demonstrated",
+    "LLM explanation quality not tested; human evaluation sheet is blank"
+  ]
+}

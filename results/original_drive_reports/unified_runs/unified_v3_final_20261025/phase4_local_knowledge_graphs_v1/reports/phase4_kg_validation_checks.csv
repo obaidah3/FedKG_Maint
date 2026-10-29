@@ -1,0 +1,37 @@
+check,status,detail
+V1 source dataset is Azure tables only,PASS,No NASA C-MAPSS input is loaded in this notebook.
+V2 five expected factory partitions are present,PASS,"['factory_1', 'factory_2', 'factory_3', 'factory_4', 'factory_5']"
+V3 each source machine maps to exactly one factory,PASS,mapped machines=100
+V4 machine coverage matches the source inventory,PASS,source inventory machines=100
+V5 shared ontology file exists,PASS,ontology triples=151
+V6 all local graph files exist,PASS,one RDF/Turtle file per factory
+V7 factory_1 machine isolation,PASS,expected=20 actual=20
+V8 factory_1 error events linked,PASS,events=797 broken=0
+V9 factory_1 maintenance events linked,PASS,events=650 broken=0
+V10 factory_1 failure records linked,PASS,events=191 broken=0
+V11 factory_1 daily telemetry linked,PASS,summaries=7320 broken=0
+V12 factory_1 ontology avoids unsupported causal edges,PASS,relationships express observations/records only
+V7 factory_2 machine isolation,PASS,expected=20 actual=20
+V8 factory_2 error events linked,PASS,events=796 broken=0
+V9 factory_2 maintenance events linked,PASS,events=650 broken=0
+V10 factory_2 failure records linked,PASS,events=161 broken=0
+V11 factory_2 daily telemetry linked,PASS,summaries=7320 broken=0
+V12 factory_2 ontology avoids unsupported causal edges,PASS,relationships express observations/records only
+V7 factory_3 machine isolation,PASS,expected=20 actual=20
+V8 factory_3 error events linked,PASS,events=789 broken=0
+V9 factory_3 maintenance events linked,PASS,events=655 broken=0
+V10 factory_3 failure records linked,PASS,events=147 broken=0
+V11 factory_3 daily telemetry linked,PASS,summaries=7320 broken=0
+V12 factory_3 ontology avoids unsupported causal edges,PASS,relationships express observations/records only
+V7 factory_4 machine isolation,PASS,expected=20 actual=20
+V8 factory_4 error events linked,PASS,events=717 broken=0
+V9 factory_4 maintenance events linked,PASS,events=657 broken=0
+V10 factory_4 failure records linked,PASS,events=130 broken=0
+V11 factory_4 daily telemetry linked,PASS,summaries=7320 broken=0
+V12 factory_4 ontology avoids unsupported causal edges,PASS,relationships express observations/records only
+V7 factory_5 machine isolation,PASS,expected=20 actual=20
+V8 factory_5 error events linked,PASS,events=820 broken=0
+V9 factory_5 maintenance events linked,PASS,events=674 broken=0
+V10 factory_5 failure records linked,PASS,events=132 broken=0
+V11 factory_5 daily telemetry linked,PASS,summaries=7320 broken=0
+V12 factory_5 ontology avoids unsupported causal edges,PASS,relationships express observations/records only

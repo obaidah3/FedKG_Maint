@@ -1,0 +1,348 @@
+{
+  "release": "FedKG-Maint Azure Phases 1-5 Groq AI-assisted review (generation complete; human pending)",
+  "date": "2026-10-28",
+  "files": [
+    {
+      "path": "notebooks/00_MASTER_Integration.ipynb",
+      "source_filename": "FedKG_Maint_MASTER_Integration_v1.ipynb",
+      "description": "main integration entry point",
+      "original_sha256": "e578912efb9da1d50303945e9697b8fce89b090f699d9233a3913352f7463d33",
+      "publication_sha256": "1e2fa5abfc9542595c0c998f9dade5bf60941dad44114d4f79f8c4c13b482e1d",
+      "cells": 14,
+      "code_cells": 7
+    },
+    {
+      "path": "notebooks/core/01_Unified_v3_Phases_1_to_4.ipynb",
+      "source_filename": "FedKG_Maint_Unified_v3_Research_Final.ipynb",
+      "description": "canonical implemented Azure pipeline",
+      "original_sha256": "3489e5355b7642c2f365fde0df7126a9bf4e236810143412abe09572ff8ab7a7",
+      "publication_sha256": "dc86945ad920ab020d2968835fc199ff4040009cbbf28f54a915afff47586c3f",
+      "cells": 63,
+      "code_cells": 41
+    },
+    {
+      "path": "notebooks/experiments/02_B1_B3_Feature_and_Temporal_FL.ipynb",
+      "source_filename": "FedKG_Maint_PhaseB_Development_Audit_and_Temporal_FL_v1.ipynb",
+      "description": "development B1-B3 HGB, MLP and LSTM comparisons",
+      "original_sha256": "59caeb99082a06fcd5ff7e2261f586acc8ebdb158d885af0d457ecf3296c1b1b",
+      "publication_sha256": "697d3e0f03cacbdae7b7c003f5bd7ca5e2ece9c357b321c08764dd0a3a1ac4e4",
+      "cells": 15,
+      "code_cells": 9
+    },
+    {
+      "path": "notebooks/experiments/03_B4_Generalization_Pilot.ipynb",
+      "source_filename": "FedKG_Maint_PhaseB4_Generalization_Recovery_v1.ipynb",
+      "description": "selected MLP pilot experiment",
+      "original_sha256": "7d091780d1c0d2b73208fd558cc8995de6a3be87a36ed1338426c5f8f6d761f4",
+      "publication_sha256": "7d091780d1c0d2b73208fd558cc8995de6a3be87a36ed1338426c5f8f6d761f4",
+      "cells": 15,
+      "code_cells": 8
+    },
+    {
+      "path": "notebooks/phase_details/Phase1_Data_Preparation_v3.ipynb",
+      "source_filename": "FedKG_Maint_Data_Preparation_v3_Revised.ipynb",
+      "description": "individual phase implementation",
+      "original_sha256": "18178128586cd8e8f58dbf082ee1909fda6eed88256c2a0be650b92d9e678508",
+      "publication_sha256": "e575285483c307ac09be77e213e0d70b8b218a411c4ce5905c836af1d2de4d76",
+      "cells": 29,
+      "code_cells": 14
+    },
+    {
+      "path": "notebooks/phase_details/Phase2_Baselines_v3.ipynb",
+      "source_filename": "FedKG_Maint_Phase2_Baselines_v3_Revised.ipynb",
+      "description": "individual phase implementation",
+      "original_sha256": "5f636b04c47a9744a74959c6d2b22cff2fbce2c5114e71877bc613136d62beb8",
+      "publication_sha256": "6d80f7c63f631f196f7e07170d840812b3cb06f716b6aaff064bf227b346f1c9",
+      "cells": 17,
+      "code_cells": 9
+    },
+    {
+      "path": "notebooks/phase_details/Phase3_Privacy_Utility_v3.ipynb",
+      "source_filename": "FedKG_Maint_Phase3_Privacy_Utility_v3.ipynb",
+      "description": "individual phase implementation",
+      "original_sha256": "a4b12edb75309095ef727e35418d062a074e9b93b2b42f5ff10f4744c0bf57df",
+      "publication_sha256": "ed9f39af163574cb4aa3ed25f31533f8fffe56c05fcc02c59efded996e7217fc",
+      "cells": 14,
+      "code_cells": 6
+    },
+    {
+      "path": "notebooks/phase_details/Phase4_Local_KG_v1.ipynb",
+      "source_filename": "FedKG_Maint_Phase4_Local_Knowledge_Graphs_v1.ipynb",
+      "description": "individual phase implementation",
+      "original_sha256": "4d72a0c9ce1c9d964f4e9df27ca9351f02d25c25b9be0b286f261a5e372c11c6",
+      "publication_sha256": "62f0fc1f16607836b7316081664a0cfa385ef04c0330b731456bdbaceeb92d55",
+      "cells": 11,
+      "code_cells": 9
+    },
+    {
+      "path": "notebooks/upcoming_not_executed/Phase5_Legacy_Draft_NOT_COMPLETE.ipynb",
+      "source_filename": "FedKG_Maint_Phase5_KG_Grounded_LLM_Explanations_v1.ipynb",
+      "description": "unexecuted next-phase draft only",
+      "original_sha256": "b50311aaa9317c4b26db72437c7d54908801c54d6bcf912c3ca992ae35272605",
+      "publication_sha256": "2172ad0d244559734f6fa08463fa3a622b06d8a3cfeadab45326ce12011e915d",
+      "cells": 9,
+      "code_cells": 7
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Data_Preparation_v2_(1).ipynb",
+      "source_filename": "FedKG_Maint_Data_Preparation_v2 (1).ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "693fa398958b33d7072311c9eafaae4e1002a54ad7bb8bc5b68631ba6fe20748",
+      "publication_sha256": "09594feaabc68c3f67f4ea9b9330b1537af4eacec9fc21bfbdab99e778a5015a",
+      "cells": 29,
+      "code_cells": 14
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Data_Preparation_v3_Revised(1).ipynb",
+      "source_filename": "FedKG_Maint_Data_Preparation_v3_Revised(1).ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "f2e0014dadb22f02c534d7460fb675df31b78b6978ef76898b46029c01105765",
+      "publication_sha256": "e575285483c307ac09be77e213e0d70b8b218a411c4ce5905c836af1d2de4d76",
+      "cells": 29,
+      "code_cells": 14
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase2_Baselines_(1).ipynb",
+      "source_filename": "FedKG_Maint_Phase2_Baselines (1).ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "b35fef24d3e6e7430e9761beabffdad74a649d126a1160f10ad3ac8281811638",
+      "publication_sha256": "f4de4a1e6fe719bbb3965d48fa308be1e6d3fb8cacfb8bf8db52dc1c32b96417",
+      "cells": 21,
+      "code_cells": 13
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase2_Baselines_v3_Revised(1).ipynb",
+      "source_filename": "FedKG_Maint_Phase2_Baselines_v3_Revised(1).ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "160cc923938fd9d036731fe999b1878caa51c214369dd3724f18da743ef7ffd9",
+      "publication_sha256": "61313822544e9b39bd57a6c9a25c48a2d5e7646b6c70d59f24ac812f4235d11e",
+      "cells": 17,
+      "code_cells": 9
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Closure_Audit_v1.ipynb",
+      "source_filename": "FedKG_Maint_Phase3_Closure_Audit_v1.ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "2a137a45bc31065702888885afc72b117d507a70bf96fc0ff1cbff9d21f11e7d",
+      "publication_sha256": "a589ce2a78f8006b95f6f407c6a020a285b7760ae1616f4e6652304601d01208",
+      "cells": 12,
+      "code_cells": 5
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Closure_Audit_v1_1_Fixed.ipynb",
+      "source_filename": "FedKG_Maint_Phase3_Closure_Audit_v1_1_Fixed.ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "c81fc2125698675b5ca5090c6514598f6692d028a742fe05e09777d18d422837",
+      "publication_sha256": "92d7cdb7990660ddafc3f6b0ff59a70f8f3f3b160aed0955ae59b7bf41b64b62",
+      "cells": 12,
+      "code_cells": 5
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Closure_Audit_v1_2_English_Final.ipynb",
+      "source_filename": "FedKG_Maint_Phase3_Closure_Audit_v1_2_English_Final.ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "b77b8eba69518b9e9ffeefe8c9b36e45ab5814c3df9aeea96f1605bff61dbc99",
+      "publication_sha256": "27aad4490d9f40969027f9acc40ec8f5c978a8ebbc404d2db669d53015a306da",
+      "cells": 12,
+      "code_cells": 5
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Federated_Learning_v1.ipynb",
+      "source_filename": "FedKG_Maint_Phase3_Federated_Learning_v1.ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "6dfed43ff56df1d550529a1c236d1451d8ad14f8d6fdd2e9daffd0954088687c",
+      "publication_sha256": "5059952d7d6c6f490741b35c698c954d06f65f701ee7336eae42fefcbfe16e64",
+      "cells": 18,
+      "code_cells": 8
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Federated_Learning_v2_Privacy_Tradeoff.ipynb",
+      "source_filename": "FedKG_Maint_Phase3_Federated_Learning_v2_Privacy_Tradeoff.ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "fe9419a759a33bb342dfffa79b6771fa0022f1d6daefb5c1813890beb92b0f00",
+      "publication_sha256": "36b1933e1296cdf8e934728865f9f1c2163007b5a85461cc16289b22dccd0929",
+      "cells": 19,
+      "code_cells": 9
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_LocalNorm_Closure_Audit_v1.ipynb",
+      "source_filename": "FedKG_Maint_Phase3_LocalNorm_Closure_Audit_v1.ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "9b7b20a9661bad1d24697cbdf02d063d532771bd144eaa892b63dde525b1be2f",
+      "publication_sha256": "892ef106f8be13423daf5bc7b1d2a4111ba4ca3d7c04ef66bfb1bf4112cf091f",
+      "cells": 11,
+      "code_cells": 5
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Privacy_Closure_v1.ipynb",
+      "source_filename": "FedKG_Maint_Phase3_Privacy_Closure_v1.ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "75f0569d10c0b400945aeb11fff7de4140faf78a34b56069b29cca93fa7956c8",
+      "publication_sha256": "8c49e893fcf23cd2503f32021e830cce98e84216bc6581e1d22183eb1d9bf69c",
+      "cells": 12,
+      "code_cells": 5
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Privacy_Utility_Fix_v2.ipynb",
+      "source_filename": "FedKG_Maint_Phase3_Privacy_Utility_Fix_v2.ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "d5216349fa769d1f30a6a274003be2dc857664af7c6e3dc80523364e986f17ed",
+      "publication_sha256": "638951800bbbb113c659a17ee6b9d3ece41c7b36d811291f7b2f856a07c15ea3",
+      "cells": 14,
+      "code_cells": 6
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Privacy_Utility_Fix_v3.ipynb",
+      "source_filename": "FedKG_Maint_Phase3_Privacy_Utility_Fix_v3.ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "4be8a840471d351d16387fee5422422ab27a1cd45a2913db571adeb2a8e2859b",
+      "publication_sha256": "4c395a7cb80c4ee580de37f0efaf0378bde8db23a978c711d613151ab0767188",
+      "cells": 14,
+      "code_cells": 6
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Privacy_Utility_LocalNorm_v1.ipynb",
+      "source_filename": "FedKG_Maint_Phase3_Privacy_Utility_LocalNorm_v1.ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "0319d9d64533a71989d4b14e1641111342988b50e47477168d6e71a3ba3f4718",
+      "publication_sha256": "fcf9b7de69657cd59abe048d64d2de7729d231fcac08d0757fbf984f046e715c",
+      "cells": 14,
+      "code_cells": 6
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Unified_Phases1_to_4_Colab_v1.ipynb",
+      "source_filename": "FedKG_Maint_Unified_Phases1_to_4_Colab_v1.ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "64c2c0dacadb6dc79ec0e288c1c2e508b882d3e56677eb8325a7b941a42ae614",
+      "publication_sha256": "97440f6089dad3356282994c556cb83031bac7a1259614393f2ef5fab20259f9",
+      "cells": 61,
+      "code_cells": 36
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Unified_v2_1_Patched_Colab(1).ipynb",
+      "source_filename": "FedKG_Maint_Unified_v2_1_Patched_Colab(1).ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "95afea37ee31580044b9db8c4099f060b79eee72c61d375e8ed78d89a6282d5f",
+      "publication_sha256": "95afea37ee31580044b9db8c4099f060b79eee72c61d375e8ed78d89a6282d5f",
+      "cells": 61,
+      "code_cells": 38
+    },
+    {
+      "path": "archive/legacy_notebooks/FedKG_Maint_Unified_v2_Optimized_Colab.ipynb",
+      "source_filename": "FedKG_Maint_Unified_v2_Optimized_Colab.ipynb",
+      "description": "historical source code (not a final submission)",
+      "original_sha256": "05c30907a40a21970262ef48f907d8855f1c8012d7c20aaa653616c9f5405711",
+      "publication_sha256": "0dd03e9d352bc17586b91dbc449b4dbc3a47f127b030fb0267162ea8058b2faa",
+      "cells": 61,
+      "code_cells": 38
+    },
+    {
+      "path": "notebooks/phase5/04_Phase5_Groq_KG_Explanations.ipynb",
+      "source_filename": "FedKG_Maint_Phase5_Groq_API_KG_Explanations_FINAL.ipynb",
+      "description": "executed Phase 5 Groq API + KG explanations, patched secure fallback, output-stripped for publication",
+      "original_sha256": "05caa8abaa58d26f05b4d92d50308954a1d6436965d4e9d7851d0f96ad64019d",
+      "publication_sha256": "94ed64f7c721769c322f89847ea8ece1bb0a164df1eaa1901a1cc02b904fde76",
+      "cells": 14,
+      "code_cells": 7
+    }
+  ],
+  "historical_source_aliases": [
+    {
+      "primary": "FedKG_Maint_Data_Preparation_v2 (1).ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Data_Preparation_v2_(1).ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Data_Preparation_v3_Revised(1).ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Data_Preparation_v3_Revised(1).ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Phase2_Baselines (1).ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase2_Baselines_(1).ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Phase2_Baselines_v3_Revised(1).ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase2_Baselines_v3_Revised(1).ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Phase3_Closure_Audit_v1.ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Closure_Audit_v1.ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Phase3_Closure_Audit_v1_1_Fixed.ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Closure_Audit_v1_1_Fixed.ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Phase3_Closure_Audit_v1_2_English_Final.ipynb",
+      "aliases": [
+        "FedKG_Maint_Phase3_Closure_Audit_v2.ipynb"
+      ],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Closure_Audit_v1_2_English_Final.ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Phase3_Federated_Learning_v1.ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Federated_Learning_v1.ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Phase3_Federated_Learning_v2_Privacy_Tradeoff.ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Federated_Learning_v2_Privacy_Tradeoff.ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Phase3_LocalNorm_Closure_Audit_v1.ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_LocalNorm_Closure_Audit_v1.ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Phase3_Privacy_Closure_v1.ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Privacy_Closure_v1.ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Phase3_Privacy_Utility_Fix_v2.ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Privacy_Utility_Fix_v2.ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Phase3_Privacy_Utility_Fix_v3.ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Privacy_Utility_Fix_v3.ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Phase3_Privacy_Utility_LocalNorm_v1.ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Phase3_Privacy_Utility_LocalNorm_v1.ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Unified_Phases1_to_4_Colab_v1.ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Unified_Phases1_to_4_Colab_v1.ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Unified_v2_1_Patched_Colab(1).ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Unified_v2_1_Patched_Colab(1).ipynb"
+    },
+    {
+      "primary": "FedKG_Maint_Unified_v2_Optimized_Colab.ipynb",
+      "aliases": [],
+      "path": "archive/legacy_notebooks/FedKG_Maint_Unified_v2_Optimized_Colab.ipynb"
+    }
+  ],
+  "outputs_stripped": true,
+  "no_private_runtime_artifacts_bundled": true,
+  "limitations": [
+    "B4 one-seed development pilot",
+    "No new blind external-site test",
+    "B4 has no final consolidated checkpoint",
+    "B4 selected model is not DP-protected",
+    "Actual LLM and NASA experiments pending",
+    "External Google Drive files required for MASTER execution"
+  ]
+}

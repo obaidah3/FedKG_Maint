@@ -1,0 +1,33 @@
+{
+  "mode": "pilot",
+  "seeds": [
+    42
+  ],
+  "rounds": 8,
+  "cap_per_training_client": 6000,
+  "batch_size": 512,
+  "window_hours": 24,
+  "learning_rate": 0.002,
+  "positive_weight_cap": 30.0,
+  "architectures": [
+    "MLP",
+    "LSTM"
+  ],
+  "feature_variants": [
+    "full",
+    "no_maintenance",
+    "sensor_history_only"
+  ],
+  "alert_budget_false_alarms_per_machine_day": 0.1,
+  "minimum_advance_notice_hours": 12,
+  "cooldown_hours": 24,
+  "source_hashes": {
+    "train.parquet": "b8dce37b63d6d7b97eeea79a4a05eef5452c07f89e8ecf3e112d3e10eee07bb5",
+    "validation.parquet": "8823d0ce6ce9f8b50ef5b28903437512661d1945fe48991a24cae7d63a77cc6f",
+    "feature_groups.json": "b7dd9821645969af5d1e724ec56757bad408d52eb49d25d65e9c0901c82bdd7a",
+    "factory_manifest.csv": "cee75cc38032f993085a85a816d179f2b1caa6db01094ac97ff86e633eed7177",
+    "PdM_failures.csv": "0c6c31a4fd52ef2df95ad7c44e8b0c8c32917bcef29ba5a1ba3ba45531ded3b7"
+  },
+  "selection_scope": "4-fold development LOFO only; no factory_5 data",
+  "privacy": "No DP mechanism for B4 model training or prediction outputs"
+}

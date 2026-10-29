@@ -1,0 +1,45 @@
+{
+  "run_id": "unified_v3_final_20261025",
+  "source": "development_leave_one_factory_out_cv_only",
+  "v1_factory5_previously_inspected": true,
+  "chosen_hgb_raw_feature_set": "full",
+  "cv_protocol": {
+    "folds": [
+      "factory_1",
+      "factory_2",
+      "factory_3",
+      "factory_4"
+    ],
+    "train_only_on_other_three": true,
+    "validation_on_left_out_dev": true,
+    "cap_rows_per_training_client": 25000,
+    "hgb_max_iter": 90
+  },
+  "candidate_models": [
+    {
+      "name": "HGB_PhysicalUnits_Robust",
+      "scaling": "raw",
+      "features": "full"
+    },
+    {
+      "name": "HGB_PhysicalUnits_Full",
+      "scaling": "raw",
+      "features": "full"
+    },
+    {
+      "name": "HGB_PhysicalUnits_NoMaintenance",
+      "scaling": "raw",
+      "features": "no_maintenance"
+    },
+    {
+      "name": "HGB_LocalScaled_Full",
+      "scaling": "local",
+      "features": "full"
+    },
+    {
+      "name": "LR_LocalScaled_Full",
+      "scaling": "local",
+      "features": "full"
+    }
+  ]
+}

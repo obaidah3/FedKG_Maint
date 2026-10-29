@@ -1,0 +1,412 @@
+{
+  "generated_utc": "2026-10-25T20:09:31+00:00",
+  "notebook_version": "prep_v3_revised",
+  "environment": {
+    "python": "3.13.16",
+    "pandas": "2.2.3",
+    "numpy": "2.1.3"
+  },
+  "checks": {
+    "DATA-1 raw files present with expected row counts": {
+      "status": "PASS",
+      "detail": "telemetry=876,100, errors=3,919, failures=761, maint=3,286, machines=100"
+    },
+    "DATA-2 initial raw fingerprint baseline created": {
+      "status": "PASS",
+      "detail": "No earlier checksum manifest existed; subsequent runs will fail if any hash changes."
+    },
+    "DQ-1 no missing values and no duplicate rows": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "DQ-2 hourly grid, identical coverage for all machines": {
+      "status": "PASS",
+      "detail": "100 machines x 8,761 rows, 2015-01-01 06:00:00 -> 2016-01-01 06:00:00"
+    },
+    "DQ-3 failure events align with telemetry timestamps": {
+      "status": "PASS",
+      "detail": "761 failure rows"
+    },
+    "DQ-4 machine identifiers consistent across tables": {
+      "status": "PASS",
+      "detail": "100 machines"
+    },
+    "L-1 label identical across three independent implementations": {
+      "status": "PASS",
+      "detail": "searchsorted == merge_asof on 876,100 rows; == brute force on 3,000 sampled rows"
+    },
+    "L-2 last 24 rows of every machine dropped (unobservable horizon)": {
+      "status": "PASS",
+      "detail": "2,400 rows dropped in total"
+    },
+    "C-0 fixed partition quotas match the raw machine-model counts": {
+      "status": "PASS",
+      "detail": "observed={'model3': 35, 'model4': 32, 'model2': 17, 'model1': 16}; quota totals={'model1': 16, 'model2': 17, 'model3': 35, 'model4': 32}"
+    },
+    "C-1 five mixed-model factories x 20 machines; each machine assigned once": {
+      "status": "PASS",
+      "detail": "primary clients contain multiple models; factory_5 has at least three model types"
+    },
+    "S-1 24h purge gaps: no label window crosses train/validation/test boundary": {
+      "status": "PASS",
+      "detail": "train end + 24h=2015-10-19 10:00:00 < val start=2015-10-19 11:00:00; validation end + 24h=2015-11-24 20:00:00 < test start=2015-11-24 21:00:00"
+    },
+    "S-2 held-out machines never appear in supervised development splits": {
+      "status": "PASS",
+      "detail": "20 held-out machines isolated from train/validation/time-test rows"
+    },
+    "S-3 no duplicate (machine, timestamp) rows inside any evaluation split": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "S-4 late site test is a subset of post-calibration site test; all evaluation splits contain positives": {
+      "status": "PASS",
+      "detail": "test_site_full rows=87,380; late subset rows=17,480"
+    },
+    "S-5 held-out calibration is earlier than and disjoint from all site-evaluation rows": {
+      "status": "PASS",
+      "detail": "calibration rows=87,360; eval starts=2015-07-02 06:00:00"
+    },
+    "S-5 event table produced": {
+      "status": "PASS",
+      "detail": "19 rows saved to split_event_table.csv"
+    },
+    "D-2 maintenance time semantics measured and documented": {
+      "status": "PASS",
+      "detail": "97.6% of failure rows have a same-timestamp replacement of the same component"
+    },
+    "FE-0 every telemetry row has a prior maintenance record (has_prior_maintenance is constant, excluded)": {
+      "status": "PASS",
+      "detail": ""
+    },
+    "FE-1 all 25 features finite, none constant in training": {
+      "status": "PASS",
+      "detail": "constant features: none"
+    },
+    "N-0 calibration artifact contains no target and no evaluation rows": {
+      "status": "PASS",
+      "detail": "87,360 feature-only calibration rows; evaluation starts 2015-07-02 06:00:00"
+    },
+    "N-1 six scalers fitted from allowed sources and saved": {
+      "status": "PASS",
+      "detail": "global + 4 local training factories + local held-out feature-only calibration"
+    },
+    "N-2 loader works for every split x policy x feature set; scaling behaves as specified": {
+      "status": "PASS",
+      "detail": "{'train': 557200, 'validation': 68000, 'test_time_late': 69920, 'test_site_late': 17480, 'test_site_full': 87380}"
+    },
+    "F-1 future perturbation leaves every tested feature vector unchanged": {
+      "status": "PASS",
+      "detail": "1000 rows tested (200 per split), 0 changed"
+    },
+    "F-2 positive control: perturbing the past does change the features": {
+      "status": "PASS",
+      "detail": "10/10 rows changed"
+    },
+    "F-3 scaler stats match permitted source rows; held-out calibration is label-free and disjoint": {
+      "status": "PASS",
+      "detail": "6 scalers checked; calibration rows=87,360; overlap rows=0"
+    },
+    "F-4 identical schema in every split; features match feature_groups.json; no id/target leaks into features": {
+      "status": "PASS",
+      "detail": "25 features; no_maintenance set has 24"
+    }
+  },
+  "all_checks_pass": true,
+  "boundaries": {
+    "train_cutoff": "2015-10-18 11:00:00",
+    "val_start": "2015-10-19 11:00:00",
+    "val_cutoff": "2015-11-23 21:00:00",
+    "test_start": "2015-11-24 21:00:00",
+    "held_out_calibration_cutoff": "2015-07-02 06:00:00",
+    "held_out_calibration_fraction": 0.5,
+    "horizon_hours": 24
+  },
+  "factory_partition": {
+    "primary_manifest": "manifests/factory_manifest.csv",
+    "alternate_stress_manifest": "manifests/factory_manifest_type_shift_stress.csv",
+    "model_quotas": {
+      "factory_1": {
+        "model1": 8,
+        "model2": 4,
+        "model3": 4,
+        "model4": 4
+      },
+      "factory_2": {
+        "model1": 4,
+        "model2": 7,
+        "model3": 5,
+        "model4": 4
+      },
+      "factory_3": {
+        "model1": 2,
+        "model2": 3,
+        "model3": 10,
+        "model4": 5
+      },
+      "factory_4": {
+        "model1": 1,
+        "model2": 2,
+        "model3": 8,
+        "model4": 9
+      },
+      "factory_5": {
+        "model1": 1,
+        "model2": 1,
+        "model3": 8,
+        "model4": 10
+      }
+    },
+    "composition": [
+      {
+        "client_id": "factory_1",
+        "model1": 8,
+        "model2": 4,
+        "model3": 4,
+        "model4": 4,
+        "mean_age": 13.4
+      },
+      {
+        "client_id": "factory_2",
+        "model1": 4,
+        "model2": 7,
+        "model3": 5,
+        "model4": 4,
+        "mean_age": 10.8
+      },
+      {
+        "client_id": "factory_3",
+        "model1": 2,
+        "model2": 3,
+        "model3": 10,
+        "model4": 5,
+        "mean_age": 10.8
+      },
+      {
+        "client_id": "factory_4",
+        "model1": 1,
+        "model2": 2,
+        "model3": 8,
+        "model4": 9,
+        "mean_age": 10.2
+      },
+      {
+        "client_id": "factory_5",
+        "model1": 1,
+        "model2": 1,
+        "model3": 8,
+        "model4": 10,
+        "mean_age": 11.4
+      }
+    ],
+    "legacy_comparison": {
+      "legacy_path": "/content/drive/MyDrive/FedKG-Maint/unified_runs/unified_v3_final_20261025/manifests/factory_manifest.csv",
+      "legacy_found": false,
+      "same_mapping": null
+    }
+  },
+  "normalization": {
+    "policies": [
+      "global",
+      "local",
+      "none"
+    ],
+    "held_out_calibration_cutoff": "2015-07-02 06:00:00",
+    "held_out_calibration_fraction": 0.5,
+    "calibration_file": "processed/heldout_calibration_features.parquet",
+    "calibration_contains_target": false,
+    "evaluation_disjoint_from_calibration": true
+  },
+  "splits": {
+    "train": {
+      "rows": 557200,
+      "machines": 80,
+      "positive_rows": 11664,
+      "positive_rate_pct": 2.0933,
+      "factories": [
+        "factory_1",
+        "factory_2",
+        "factory_3",
+        "factory_4"
+      ]
+    },
+    "validation": {
+      "rows": 68000,
+      "machines": 80,
+      "positive_rows": 1133,
+      "positive_rate_pct": 1.6662,
+      "factories": [
+        "factory_1",
+        "factory_2",
+        "factory_3",
+        "factory_4"
+      ]
+    },
+    "test_time_late": {
+      "rows": 69920,
+      "machines": 80,
+      "positive_rows": 1377,
+      "positive_rate_pct": 1.9694,
+      "factories": [
+        "factory_1",
+        "factory_2",
+        "factory_3",
+        "factory_4"
+      ]
+    },
+    "test_site_late": {
+      "rows": 17480,
+      "machines": 20,
+      "positive_rows": 384,
+      "positive_rate_pct": 2.1968,
+      "factories": [
+        "factory_5"
+      ]
+    },
+    "test_site_full": {
+      "rows": 87380,
+      "machines": 20,
+      "positive_rows": 1440,
+      "positive_rate_pct": 1.648,
+      "factories": [
+        "factory_5"
+      ]
+    }
+  },
+  "held_out_calibration": {
+    "rows": 87360,
+    "columns": [
+      "datetime",
+      "machineID",
+      "client_id",
+      "volt",
+      "rotate",
+      "pressure",
+      "vibration",
+      "volt_past_mean_24h",
+      "volt_past_std_24h",
+      "volt_past_mean_7d",
+      "volt_past_std_7d",
+      "rotate_past_mean_24h",
+      "rotate_past_std_24h",
+      "rotate_past_mean_7d",
+      "rotate_past_std_7d",
+      "pressure_past_mean_24h",
+      "pressure_past_std_24h",
+      "pressure_past_mean_7d",
+      "pressure_past_std_7d",
+      "vibration_past_mean_24h",
+      "vibration_past_std_24h",
+      "vibration_past_mean_7d",
+      "vibration_past_std_7d",
+      "hours_since_last_error_log1p",
+      "has_prior_error",
+      "hours_since_last_maintenance_log1p",
+      "past_observation_count_24h",
+      "past_observation_count_7d"
+    ],
+    "contains_target": false
+  },
+  "failure_events": {
+    "train": 491,
+    "validation": 48,
+    "test_time_late": 58,
+    "test_site_late": 16,
+    "test_site_full": 60
+  },
+  "features": {
+    "n_features": 25,
+    "groups": {
+      "sensor_raw": 4,
+      "rolling_stats": 16,
+      "error_recency": 2,
+      "maintenance_recency": 1,
+      "history_counts": 2
+    },
+    "primary_feature_set": "full",
+    "ablation_feature_set": "no_maintenance",
+    "error_recency_sentinel_hours": 1654.0
+  },
+  "maintenance_semantics": {
+    "maintenance_records": 3286,
+    "records_before_telemetry_start": 400,
+    "records_at_a_failure_timestamp_any_component": 1022,
+    "records_at_a_failure_timestamp_same_component": 743,
+    "share_of_failures_with_same_timestamp_replacement": 0.9763
+  },
+  "raw_data_checksums": {
+    "PdM_telemetry.csv": {
+      "rows": 876100,
+      "bytes": 80142329,
+      "sha256": "d957f3c45bb83416b716600da8cffd72f4b6961db89867d9696ad19f7cb1bd4e"
+    },
+    "PdM_errors.csv": {
+      "rows": 3919,
+      "bytes": 129077,
+      "sha256": "9c2a2a010ad77227e2bb0c94e7971bca78810790ddd1f28a8bee4f12c2f62370"
+    },
+    "PdM_failures.csv": {
+      "rows": 761,
+      "bytes": 24336,
+      "sha256": "0c6c31a4fd52ef2df95ad7c44e8b0c8c32917bcef29ba5a1ba3ba45531ded3b7"
+    },
+    "PdM_maint.csv": {
+      "rows": 3286,
+      "bytes": 104903,
+      "sha256": "481ed4e155f609e6ca6130754d2c035453093902a507cce5b3f3e235995f1db6"
+    },
+    "PdM_machines.csv": {
+      "rows": 100,
+      "bytes": 1582,
+      "sha256": "5e8e1571c4999bf88abb7cae3925964c218d946fe851a9a100bb3d19330652bc"
+    }
+  },
+  "known_limitations": [
+    "The factories are simulated clients, not real factory records; this preprocessing notebook centralizes the raw tables to simulate the partition.",
+    "The primary partition uses mixed machine types with different quotas, reducing the old single-model held-out confounding but not proving generalization to a real site. A model-blocked stress-test manifest is saved separately and must be evaluated in a separate experiment.",
+    "The first 50% of the held-out timeline is used only for unsupervised local-scaler calibration. The feature-only artifact omits labels, and all site-evaluation rows are later than the calibration cutoff.",
+    "test_site_late is a subset of test_site_full; these results are nested, not independent samples. Confidence intervals should be computed by machine or distinct failure event, not by treating hourly rows as independent.",
+    "The data cover one year and each temporal split has a limited number of distinct failure events; per-factory and late-window metrics can be statistically fragile.",
+    "Positive rows are not independent: one failure can produce up to 24 consecutive positive rows. The effective sample size is closer to the number of distinct failure events.",
+    "Maintenance recency partly encodes time since the last failure because replacements may coincide with failures. It is past-only, included in 'full', and should be ablated using 'no_maintenance'.",
+    "Rolling windows are row-count based and rely on the verified regular hourly grid (DQ-2).",
+    "A global scaler is a centralized reference. The local scaler is an unsupervised adaptation policy; neither alone implements secure federated learning or a formal privacy guarantee."
+  ],
+  "problem_to_change_to_evidence": [
+    {
+      "problem": "Raw-data reproducibility",
+      "change": "Compare SHA-256, byte size and row count with an immutable prior manifest; fail on mismatch",
+      "evidence": "DATA-1, DATA-2"
+    },
+    {
+      "problem": "Held-out calibration overlaps old site test",
+      "change": "Use a feature-only calibration artifact and start site evaluation after the calibration cutoff",
+      "evidence": "S-5, N-0, F-3"
+    },
+    {
+      "problem": "Site/type confounding",
+      "change": "Use mixed-model quotas for primary clients and save a separate model-blocked stress-test manifest",
+      "evidence": "C-0, C-1, factory_partition_config.json"
+    },
+    {
+      "problem": "Label construction",
+      "change": "Recompute the 24-hour label independently and test boundary handling",
+      "evidence": "L-1, L-2"
+    },
+    {
+      "problem": "Temporal leakage",
+      "change": "Use 24-hour purge gaps, past-only features, future perturbation and a past-perturbation positive control",
+      "evidence": "S-1, F-1, F-2"
+    },
+    {
+      "problem": "Feature/schema integrity",
+      "change": "Validate finite values, scaler source statistics, consistent schemas and exclusion of labels/IDs from features",
+      "evidence": "FE-1, F-3, F-4"
+    },
+    {
+      "problem": "Machine-type stress generalization",
+      "change": "Save a model-blocked alternate manifest; it must be run as a separate evaluation scenario",
+      "evidence": "factory_manifest_type_shift_stress.csv"
+    }
+  ]
+}
