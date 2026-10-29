@@ -6,10 +6,6 @@ This repository combines Azure PdM preprocessing, centralized baselines, federat
 
 > **Research rather than production software.** Architecture selection was based on development data. No final four-client retrained deployment checkpoint exists for B4, earlier DP guarantees do not apply to its MLP, and NASA C-MAPSS required by the original brief is not implemented here.
 
-## خلاصـة بالعربي
-
-المستودع ده النسخة المجمّعة للكود والنتائج المتاحة للمراحل الخمس الخاصة بـ Azure. اختيارنا الهندسي هو **Federated MLP + FedAvg** من B4 Pilot. Phase 5 اتنفذت فعليًا عن طريق **Groq API**: **24/24 إجابة** (12 حالة × مع/بدون KG). التقييم الآلي للاستشهادات والتقييم التحليلي بمساعدة AI تم، لكن **Human Evaluation مستقل لم يكتمل**. مفيش حاجة تستدعي إعادة B1–B4 أو أي Groq API Call لتوثيق النتائج الحالية.
-
 ## Main notebooks
 
 | Notebook | Purpose | Re-run for documentation? |
