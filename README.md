@@ -6,7 +6,7 @@
 
 [![Research status](https://img.shields.io/badge/status-research%20prototype-336699)](#scope-and-release-status) [![Notebook validation](https://img.shields.io/badge/notebooks-27-blue)](#repository-map) [![Evaluation](https://img.shields.io/badge/phase%205-24%2F24%20responses-218b58)](#study-iv--knowledge-graph-grounded-llm-explanations) [![Dataset](https://img.shields.io/badge/dataset-Microsoft%20Azure%20PdM-555)](#dataset-and-client-partitioning)
 
-> **Research integrity / scope.** Results reported here are **development-study results**, not a new blind deployment evaluation. The frozen **B4** architecture choice is a **25-feature, 32–8 hidden-unit federated MLP trained by FedAvg**. B4 stores **four distinct leave-one-factory-out prediction sets**, not a single four-client fitted production checkpoint. Its selected model has **no DP guarantee**; conditional processed-record DP was investigated separately. **NASA C-MAPSS remains unimplemented.** Phase 5 has completed its 24 Groq responses and an **AI-assisted** review, **not an independent human evaluation**. These distinctions are part of the reported findings, not footnotes to be ignored.
+> **Research integrity / scope.** Results reported here are **development-study results**, not a new blind deployment evaluation. The frozen **B4** architecture choice is a **25-feature, 32–8 hidden-unit federated MLP trained by FedAvg**. B4 stores **four distinct leave-one-factory-out prediction sets**, not a single four-client fitted production checkpoint. Its selected model has **no DP guarantee**; conditional processed-record DP was investigated separately.Phase 5 has completed its 24 Groq responses and an **AI-assisted** review, **not an independent human evaluation**. These distinctions are part of the reported findings, not footnotes to be ignored.
 
 
 ## Abstract
@@ -766,7 +766,6 @@ Then inspect the B4 experimental lock and actual output table, and the Phase 5 r
 | AI-assisted evaluation of 24 outputs | Completed; **not** independent human review |
 | Independent human evaluation | **Not completed** |
 | Final all-client retrained B4 production checkpoint | **Not delivered** |
-| NASA C-MAPSS RUL validation | **Not implemented** |
 
 **Reproducibility statement.** Research reports, source notebooks, and provenance checks are shared to make the work inspectable. No guarantee of out-of-the-box full reproduction without large Drive artifacts, original sample data and aligned environment versions is implied. Do not apply these models directly to hazardous industrial operations without independent verification, calibration, and domain-specific safety engineering.
 
