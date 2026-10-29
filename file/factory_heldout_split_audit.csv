@@ -1,5 +1,0 @@
-split,rows,machines,factories,start_time,end_time,negative_labels,positive_labels,positive_rate
-train_federated,557200,80,"['factory_1', 'factory_2', 'factory_3', 'factory_4']",2015-01-01 06:00:00,2015-10-18 10:00:00,545563,11637,0.02088478104809763
-validation_federated,68000,80,"['factory_1', 'factory_2', 'factory_3', 'factory_4']",2015-10-19 11:00:00,2015-11-23 20:00:00,66924,1076,0.015823529411764705
-test_heldout,17480,20,['factory_5'],2015-11-24 21:00:00,2015-12-31 06:00:00,17168,312,0.017848970251716247
-test_gap_heldout,480,20,['factory_5'],2015-11-23 21:00:00,2015-11-24 20:00:00,480,0,0.0

@@ -1,5 +1,0 @@
-split,rows,model_features,positive_rate,missing_model_features
-train_federated,557200,25,0.02088478104809763,0
-validation_federated,68000,25,0.015823529411764705,0
-test_heldout,17480,25,0.017848970251716247,0
-test_gap_heldout,480,25,0.0,0

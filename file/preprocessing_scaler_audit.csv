@@ -1,6 +1,0 @@
-scaler,fit_rows,fit_machines,fit_factories,feature_count,saved_path
-factory_1_scaler,139300,20,factory_1,25,/content/drive/MyDrive/FedKG-Maint/preprocessing/scalers/factory_1_scaler.joblib
-factory_2_scaler,139300,20,factory_2,25,/content/drive/MyDrive/FedKG-Maint/preprocessing/scalers/factory_2_scaler.joblib
-factory_3_scaler,139300,20,factory_3,25,/content/drive/MyDrive/FedKG-Maint/preprocessing/scalers/factory_3_scaler.joblib
-factory_4_scaler,139300,20,factory_4,25,/content/drive/MyDrive/FedKG-Maint/preprocessing/scalers/factory_4_scaler.joblib
-centralized_train_scaler,557200,80,"factory_1,factory_2,factory_3,factory_4",25,/content/drive/MyDrive/FedKG-Maint/preprocessing/scalers/centralized_train_scaler.joblib
